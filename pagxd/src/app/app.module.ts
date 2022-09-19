@@ -13,6 +13,7 @@ import { FormularioComponent } from './AtencionC/formulario/formulario.component
 import { HomeComponent } from './home/home.component';
 import { FondoPComponent } from './section/fondo-p/fondo-p.component';
 import { FondoIniComponent } from './section/fondo-ini/fondo-ini.component';
+import { CarruselComponent } from './section/carrusel/carrusel.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FondoIniComponent } from './section/fondo-ini/fondo-ini.component';
     FormularioComponent,
     HomeComponent,
     FondoPComponent,
-    FondoIniComponent
+    FondoIniComponent,
+    CarruselComponent
   ],
   imports: [
     BrowserModule,
