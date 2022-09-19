@@ -1,0 +1,19 @@
+.bt{
+    float: right;
+    margin-top: 40%;
+    border: darkcyan;
+    border-radius: 1.5rem;
+    padding: 0%;
+    background: #ffffff;
+    color: rgb(24, 19, 19);
+    font-weight: 50;
+    width: 20%;
+    cursor: pointer;
+}
+
+.letra{
+    font-family: fantasy;
+    font-size: 120%;
+    text-align: center;
+    
+}
