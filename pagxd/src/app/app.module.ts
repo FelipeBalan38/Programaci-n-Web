@@ -7,6 +7,7 @@ import { HeaderComponent } from './section/header/header.component';
 import { FondComponent } from './section/fond/fond.component';
 import { TituloComponent } from './section/titulo/titulo.component';
 import { PieComponent } from './section/pie/pie.component';
+import { CarruselComponent } from './section/carrusel/carrusel.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PieComponent } from './section/pie/pie.component';
     HeaderComponent,
     FondComponent,
     TituloComponent,
-    PieComponent
+    PieComponent,
+    CarruselComponent
   ],
   imports: [
     BrowserModule,

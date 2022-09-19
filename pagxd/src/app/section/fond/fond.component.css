@@ -1,6 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 img {
     margin: 0;
-    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -19,4 +20,18 @@ background-position: center;
 background-color:rgb(0, 155, 219 ) ;
 filter: opacity(0.4) drop-shadow(0 0 0 rgb(0, 155, 219 )); 
     
+}
+.service{
+    position: fixed;
+    top: 70%;
+    left: 90%;
+    height: 60px;
+    width: 100px;
+}
+.fuente{
+    margin-top: 80px;
+    margin-left: 40px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 68px;
+    color: white;
 }
