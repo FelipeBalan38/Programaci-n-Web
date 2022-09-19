@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+.itemcarrusel{
+   
+    position: relative;
+}
+
+.tarjetacarrusel{
+    background-color: rgba(0, 78, 99,0.6);
+    height: 400px;
+}
+.flechascarrusel{
+    background-color: rgba(0, 164, 211 ,0.0);
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 1%;
+}
+#conteItemsCarrusel{
+    border: 5px;
+    height: 400px;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    overflow: hidden;
+
+}
+#item1{
+
+}
+#item2{
+
+}
+#item3{
+
+}
+.items{
+    margin-top: 80px;
+    margin-left: 40px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 68px;
+}
+.imagen1{
+    height: 70%;
+    width: 18.8%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    border-radius: 50px;
+    box-shadow: 10px 5px 5px black;
+}
+.imagen3{
+ height: 76%;
+ width: 24.82%;
+ position: absolute;
+ top: 12%;
+ left: 60.78%;
+ border-radius: 50px;
+ box-shadow: 10px 5px 5px black;
+}
+.imagen2{
+ height: 70%;
+width: 18.8%;
+ position: absolute;
+ top: 15%;
+ left: 77.58%;
+ border-radius: 50px;
+ box-shadow: 10px 5px 5px black;
+}
+#tarjeta1{
+    background-color:rgba(21,124,168,0.6);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#tarjeta2{
+    background-color:rgba(21,124,168,0.6);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#tarjeta3{
+    background-color:rgba(21,124,168,0.6);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.imgpanel{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.imgs{
+    
+}
