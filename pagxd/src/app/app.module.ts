@@ -7,6 +7,12 @@ import { HeaderComponent } from './section/header/header.component';
 import { FondComponent } from './section/fond/fond.component';
 import { TituloComponent } from './section/titulo/titulo.component';
 import { PieComponent } from './section/pie/pie.component';
+<<<<<<< Updated upstream
+=======
+import { CarruselComponent } from './section/carrusel/carrusel.component';
+import { PlanComponent } from './seccion2/plan/plan.component';
+import { HomeComponent } from './home/home.component';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -14,7 +20,14 @@ import { PieComponent } from './section/pie/pie.component';
     HeaderComponent,
     FondComponent,
     TituloComponent,
+<<<<<<< Updated upstream
     PieComponent
+=======
+    PieComponent,
+    CarruselComponent,
+    PlanComponent,
+    HomeComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
