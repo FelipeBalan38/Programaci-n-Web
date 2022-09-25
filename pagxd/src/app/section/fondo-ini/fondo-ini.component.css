@@ -57,7 +57,7 @@ filter: opacity(0.4) drop-shadow(0 0 0 rgb(0, 155, 219 ));
 
 
 .third {
-float: right;
+float: centers;
 margin-top: 10%;
 border-color: #156594;
 color: rgb(255, 255, 255);
