@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { FondoPComponent } from './section/fondo-p/fondo-p.component';
 import { FondoIniComponent } from './section/fondo-ini/fondo-ini.component';
 import { CarruselComponent } from './section/carrusel/carrusel.component';
+import { HeaderiniComponent } from './section/headerini/headerini.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { CarruselComponent } from './section/carrusel/carrusel.component';
     HomeComponent,
     FondoPComponent,
     FondoIniComponent,
-    CarruselComponent
+    CarruselComponent,
+    HeaderiniComponent
   ],
   imports: [
     BrowserModule,

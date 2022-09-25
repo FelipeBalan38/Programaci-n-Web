@@ -53,3 +53,24 @@ filter: opacity(0.4) drop-shadow(0 0 0 rgb(0, 155, 219 ));
     text-align: center;
     
 }
+
+
+
+.third {
+float: right;
+margin-top: 10%;
+border-color: #156594;
+color: rgb(255, 255, 255);
+box-shadow: 0 0 40px 40px #156594 inset, 0 0 0 0 #156594;
+-webkit-transition: all 150ms ease-in-out;
+transition: all 150ms ease-in-out;
+}
+.third:hover {
+box-shadow: 0 0 10px 0 #234860 inset, 0 0 10px 4px #234860;
+}
+
+
+
+
+
+
