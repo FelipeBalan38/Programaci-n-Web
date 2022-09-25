@@ -50,10 +50,13 @@ nav ul {
     padding: 0;
 }
 
+/*
 .sty{
     cursor: pointer;
     
 }
+
+
 nav ul li {
     --c: #65deff;
     color: var(--c);
@@ -112,3 +115,22 @@ nav ul li span:nth-child(3) {
 nav ul li span:nth-child(4) {
     --n: 4;
 }
+*/
+
+.sixt {
+    border-color: #36bcf4;
+    color: rgb(0, 0, 0);
+    background-image: -webkit-linear-gradient(45deg, #36bcf4 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #36bcf4 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    float: right;
+    border-radius: 1.5rem;
+    width: 45%;
+    margin-top: 30%;
+  }
+  .sixt:hover {
+    background-position: 0;
+  }
