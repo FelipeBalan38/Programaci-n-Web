@@ -9,6 +9,7 @@ import { TituloComponent } from './section/titulo/titulo.component';
 import { PieComponent } from './section/pie/pie.component';
 import { CarruselComponent } from './section/carrusel/carrusel.component';
 import { InformacionComponent } from './section/informacion/informacion.component';
+import { PlanComponent } from './seccion2/plan/plan.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { InformacionComponent } from './section/informacion/informacion.componen
     TituloComponent,
     PieComponent,
     CarruselComponent,
-    InformacionComponent
+    InformacionComponent,
+    PlanComponent
   ],
   imports: [
     BrowserModule,

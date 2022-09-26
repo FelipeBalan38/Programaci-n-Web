@@ -1,0 +1,18 @@
+.carta
+{
+    background-color: white;
+    border-radius: 20px;
+}
+.font
+{
+    font-family: 'Bebas Neue', cursive;
+}
+.zoom
+{
+    transition: transform 0.5s;
+}
+.zoom:hover
+{
+    transform: scale(1.11);
+    background-color:aliceblue;
+}
