@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FondComponent } from './section/fond/fond.component';
+import { EnviadoComponent } from './AtencionC/enviado/enviado.component';
+import { HomeComponent } from './home/home.component';
+import { FondPComponent } from './section/fond-p/fond-p.component';
 import { InformacionComponent } from './section/informacion/informacion.component';
 
 const routes: Routes = [
-  {path:'home',component:FondComponent},
-  {path:'infor',component:InformacionComponent}
+  {path:'home',component:HomeComponent},
+  {path:'infor',component:InformacionComponent},
+  {path:'ATC', component:FondPComponent},
+  {path:'Envio', component:EnviadoComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 
 @NgModule({

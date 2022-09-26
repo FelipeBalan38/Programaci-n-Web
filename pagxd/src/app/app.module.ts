@@ -10,6 +10,11 @@ import { PieComponent } from './section/pie/pie.component';
 import { CarruselComponent } from './section/carrusel/carrusel.component';
 import { InformacionComponent } from './section/informacion/informacion.component';
 import { PlanComponent } from './seccion2/plan/plan.component';
+import { AtencionCComponent } from './atencion-c/atencion-c.component';
+import { EnviadoComponent } from './AtencionC/enviado/enviado.component';
+import { FormularioComponent } from './AtencionC/formulario/formulario.component';
+import { FondPComponent } from './section/fond-p/fond-p.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { PlanComponent } from './seccion2/plan/plan.component';
     PieComponent,
     CarruselComponent,
     InformacionComponent,
-    PlanComponent
+    PlanComponent,
+    AtencionCComponent,
+    EnviadoComponent,
+    FormularioComponent,
+    FondPComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
