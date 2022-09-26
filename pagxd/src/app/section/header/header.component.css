@@ -1,3 +1,15 @@
 .sv{
     background-color: blue;
 }
+.col{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+.opcion:hover{
+    background-color: rgb(37, 150, 190);
+    color: white;
+    border-radius: 2%;
+}
+.opcion::after{
+    transition: 9s ease-in-out all;
+}
