@@ -15,6 +15,8 @@ import { EnviadoComponent } from './AtencionC/enviado/enviado.component';
 import { FormularioComponent } from './AtencionC/formulario/formulario.component';
 import { FondPComponent } from './section/fond-p/fond-p.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
