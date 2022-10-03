@@ -12,7 +12,7 @@
 .bg{
     background-color: rgba(0, 78, 99,0.6);
     height: 400px; 
-    width:100%
+    width: auto
 }
 .letra{
     color: rgb(242, 242, 242);
