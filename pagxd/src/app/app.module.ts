@@ -17,6 +17,7 @@ import { FondPComponent } from './section/fond-p/fond-p.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AvisosComponent } from './section/avisos/avisos.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     EnviadoComponent,
     FormularioComponent,
     FondPComponent,
-    HomeComponent
+    HomeComponent,
+    AvisosComponent
   ],
   imports: [
     BrowserModule,

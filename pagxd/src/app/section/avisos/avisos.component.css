@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.letra{
+    text-align: center;
+    color: rgb(242, 242, 242);
+  
+    font-family: 'Bebas Neue', cursive;
+    font-size: 68px;
+}
+
+.carta
+{
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    background-image:    linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+     url("/assets/img/fondoa.jpg");
+   
+    ;
+}
+.font
+{
+    font-family: 'Bebas Neue', cursive;
+}
+.zoom
+{
+    transition: transform 0.5s;
+}
+.zoom:hover
+{
+    transform: scale(1.11);
+    background-color:aliceblue;
+}
+.btn{
+    position: relative;
+    margin-bottom: 20px;
+}
