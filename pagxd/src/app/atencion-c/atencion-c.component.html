@@ -1,5 +1,5 @@
 <div class="container2 text-center p-2">
-    <h2 class="letra"><span style="color:azure;">PAGOS PENDIENTES</span></h2>
+    <h2 class="letra"><span style="color:azure;">HISTORIAL DE PAGOS</span></h2>
     </div>
                         
                         <div class="table-responsive-md text-center p-4">
@@ -13,12 +13,6 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <tr style="background-color: rgb(255, 255, 255);  font-family: 'Bebas Neue', cursive; font-size: 24px;">
-                                <td scope="row" ><strong>MARZO</strong></td>
-                                <td><strong>300</strong></td>
-                                <td><strong><span style="color:crimson;">Sin Pagar</span></strong></td>
-                                <td><strong>13/03/2022</strong></td>
-                              </tr>
                               <tr style="background-color: rgb(255, 255, 255); font-family: 'Bebas Neue', cursive; font-size: 24px;">
                                 <td scope="row"><strong>FEBRERO</strong></td>
                                 <td><strong>300</strong></td>
@@ -39,30 +33,38 @@
                               </tr>
                             </tbody>
                           </table>
-    
-                          
-                          <div class="accordion " id="accordionExample">
-                            <div class="accordion-item ">
-                              <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                  Mostrar Historial Completo
-                                </button>
-                              </h2>
-                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                  <tr style="background-color: rgb(255, 255, 255); font-family: 'Bebas Neue', cursive; font-size: 24px;">
-                                    <td scope="row"><strong>DICIEMBRE</strong></td>
+                          <p class="my-3">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3">Pagos Pendientes</button>
+                          </p>
+                          <div class="row">
+                            <div class="col-3">
+                              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body">
+                                  <tr style="background-color: rgb(255, 255, 255);  font-family: 'Bebas Neue', cursive; font-size: 24px;">
+                                    <td scope="row" ><strong>MARZO</strong></td>
                                     <td><strong>300</strong></td>
-                                    <td><strong>Pagado</strong></td>
-                                    <td><strong>13/12/2022</strong></td>
+                                    <td><strong><span style="color:crimson;">Sin Pagar</span></strong></td>
+                                    <td><strong>13/03/2022</strong></td>
+                                  </tr>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        
-    
-    
+                          <div class="col-3">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                              <div class="card card-body">
+                                <tr style="background-color: rgb(255, 255, 255);  font-family: 'Bebas Neue', cursive; font-size: 24px;">
+                                  <td scope="row" ><strong>MARZO</strong></td>
+                                  <td><strong>300</strong></td>
+                                  <td><strong><span style="color:crimson;">Sin Pagar</span></strong></td>
+                                  <td><strong>13/03/2022</strong></td>
+                                </tr>
+                              </div>
+                            </div>
+                            
                         </div>
+                          </div>
+
+                        
     
     
     
