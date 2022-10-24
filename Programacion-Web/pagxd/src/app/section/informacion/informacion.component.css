@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+.movi{
+    animation: movimiento 2.5s linear infinite;
+  }
+  .letra{
+    font-family: 'Bebas Neue', cursive;
+  }
+  .bor{
+    border-radius: 35px;
+    height: 250px;
+    width: 400px;
+  }
+  .header{
+    text-align:justify;
+   color: rgb(121,222,245);
+   font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+  }
+  .letra{
+   
+    color: rgb(240, 244, 245);
+    font-family: 'Bebas Neue', cursive;
+  
+  }
+  .imagecenter{
+    text-align: center;
+    border-top: 35%;
+  }
+.boton.uno::after{
+content: "";
+width: 100%;
+height: 100%;
+background-color: rgba(0, 78, 99,0.6);
+position: absolute;
+z-index: 2;
+top: -80px;
+left: 0;
+transition: .3s ease-in-out all;
+}
+.contenedor.un::after{
+content: "";
+width: 100%;
+height: 100%;
+background-image: url("https://cdn.discordapp.com/attachments/834498407241351223/1023684420986744922/Picsart_22-09-25_14-56-13-852.jpg");
+position: absolute;
+top: -400px;
+left: 0;
+transition: .9s ease-in-out all;
+}
+
+.contenedor.doss::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.discordapp.com/attachments/834498407241351223/1023777971888193546/Picsart_22-09-25_21-07-44-340.jpg");
+  position: absolute;
+  top: -400px;
+  left: 0;
+  transition: .9s ease-in-out all;
+  }
+.contenedor.un:hover::after{
+  top: 0;
+  }
+  .contenedor.doss:hover::after{
+    top: 0;
+    }
+.boton.uno:hover::after{
+top: 0;
+}
+.boton:hover{
+  color: white;
+  background-color: rgba(0, 78, 99,0.6);
+}
+.boton{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 80px;
+  margin-bottom: 5%;
+  background: white;
+  color: black;
+border: none;
+cursor: pointer;
+text-transform: uppercase;
+transition: .3s ease all;
+border-radius: 5px;
+position: relative;
+display: block;
+overflow: hidden;
+margin-inline-start: auto;
+}
+.contenedor{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+border: none;
+cursor: pointer;
+text-transform: uppercase;
+transition: .3s ease all;
+border-radius: 5px;
+display: block;
+position: relative;
+text-align: center;
+overflow: hidden;
+margin-inline-start: auto;
+
+}
+
+.contenedor span{
+  position: relative;
+  z-index: 3;
+  transition: .3s ease all;
+}
+.contenedor:hover{
+  color: rgb(37, 150, 190);
+  
+}
+.boton span{
+  position: relative;
+  z-index: 3;
+  transition: .3s ease all;
+}
+  @keyframes burbujas{
+    0%{
+      bottom: 0;
+      opacity: 0;
+    }
+    30%{
+      transform: translateX(30px);
+    }
+    50%{
+      opacity: .4;
+    }
+    100%{
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
+  @keyframes movimiento{
+  0%{
+  transform: translateY(0);
+  }
+  50%{
+  transform: translateY(30px);
+  }
+  100%{
+  transform: translateY(0);
+  }
+  }
+  .cont {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  height: 400px;
+  position: relative;
+  }

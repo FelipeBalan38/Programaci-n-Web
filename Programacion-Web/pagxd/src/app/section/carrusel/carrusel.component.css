@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.tam{
+   height: 400px;;
+   width: 100%;
+    display: flex;
+}
+.car{
+    height: 400px;
+    background-color: rgba(0, 78, 99,0.6);
+}
+.bg{
+    background-color: rgba(0, 78, 99,0.6);
+    height: 400px; 
+    width:auto;
+}
+.letra{
+    color: rgb(242, 242, 242);
+    margin-top: 80px;
+    margin-left: 40px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 68px;
+}
+.tipo{
+    text-align:center;
+   color: rgb(242, 242, 242);
+   font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+  }
+  .imagen1{
+    height: 70%;
+    width: 18.8%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    border-radius: 50px;
+    box-shadow: 10px 5px 5px black;
+}
+.row{
+    display: flex;
+    margin-right: 0px;
+}
+.imagen3{
+ height: 76%;
+ width: 24.82%;
+ position: absolute;
+ top: 12%;
+ left: 60.78%;
+ border-radius: 50px;
+ box-shadow: 10px 5px 5px black;
+}
+.imagen2{
+ height: 70%;
+width: 18.8%;
+ position: absolute;
+ top: 15%;
+ left: 77.58%;
+ border-radius: 50px;
+ box-shadow: 10px 5px 5px black;
+}
