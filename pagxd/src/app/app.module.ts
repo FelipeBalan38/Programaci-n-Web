@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AvPagoComponent } from './av-pago/av-pago.component';
+import { PagosAdministradorComponent } from './pagos-administrador/pagos-administrador.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AvPagoComponent } from './av-pago/av-pago.component';
     FormularioComponent,
     FondPComponent,
     HomeComponent,
-    AvPagoComponent
+    AvPagoComponent,
+    PagosAdministradorComponent
   ],
   imports: [
     BrowserModule,
