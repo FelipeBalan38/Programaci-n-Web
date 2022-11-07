@@ -1,0 +1,68 @@
+
+
+<div class="container text-justify">
+    <h1 class="text-center">Customer Center</h1>
+    <p class="text-center">To help us assist you most efficiently, please log in to our Customer Support Center:</p>
+  </div>
+ <!--<pre>{{usuarioForm.value|json}}</pre>-->
+    <div class="container text-justify border border-5" style="background-color:white ;">
+      <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Nuevo Usuario</button>
+            
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+              <!----------------------Aquí va el primer formulario----------------->
+              <br>
+              <form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm.value)">
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Default input" ngModel required style="background-color:aliceblue;">
+
+                  <label for="floatingInput">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+                      <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
+                    </svg> Name:
+                  </label>
+              </div>
+              <div class="form-floating mb-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" ngModel required style="background-color:aliceblue;">
+
+                  <label for="floatingInput">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg> Email:
+                  </label>
+              </div>
+              <!--------------------Texto---------------------------->
+              <div class="container">
+                <p class="text-center">*If you are an existing customer of ours, please <a href="#nav-profile">click here</a> to identify for faster assistance</p>
+              </div>
+              <!--------------Fin del texto--------->
+              <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Question:</label>
+                  <textarea class="form-control" name="question" id="question" ngModel required rows="3" style="background-color:aliceblue;"></textarea>
+
+                </div>
+                <div class="nav-item active">
+                  <div class="col-8">
+                    <a class="btn fourth" routerLinkActive="active" routerLink="/roma"><p class="envil mb-1"><span style="text-align:end;">TABLADMIN</span></p></a>
+                </div>
+              </div>
+
+                <div class="row justify-content-center">
+                  <div class="col">
+                    <button type="submit" class="btn fift">Continue</button>
+                  </div>
+                </div>
+              </form>
+                <br>
+              <!----------------------------Segundo formulario----------------------->
+          </div>
+          <br>
+      
+        </div>
+    </div>
+
+    <!--<app-form *ngFor="let usuario of usuarios; let i=index;" [empleadoL]="usuario" [indice]="i"></app-form>-->
