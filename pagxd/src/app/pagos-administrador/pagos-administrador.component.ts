@@ -26,6 +26,8 @@ export class PagosAdministradorComponent implements OnInit {
     this.usuarioService.create(usuario).subscribe(res=>{
         this.usuarios.push(usuario);
       });
+      console.log("AAAAAAAAAAAAAAAAAAAAAAAAAA");
+      
   }
 
   updateUsuario(usuario:Usuario){
