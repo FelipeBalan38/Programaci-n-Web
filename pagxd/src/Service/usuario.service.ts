@@ -9,7 +9,7 @@ import { Usuario } from 'src/shared/api.service';
 export class UsuarioService {
 
   usuario!: Usuario
-  private readonly url = 'http://127.0.0.1:8000/api/pagos'; 
+  private readonly url = 'https://crudcrud.com/api/5897190265e043b4b9b8985ca85b3e53/pagos'; 
   constructor(private readonly http:HttpClient) { }
 
   create(usuario:Usuario):Observable<Usuario>{
@@ -25,7 +25,7 @@ export class UsuarioService {
   }
 
   updateUser(usuario:Usuario):Observable<void>{
-    return this.http.put<void>(`${this.url}/${usuario.id}`,usuario)
+    return this.http.put<void>(`${this.url}/${usuario._id}`,usuario)
   }
 
   deleteUser(id:String):Observable<void>{

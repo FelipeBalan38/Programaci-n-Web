@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('pagos', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('question');
+            $table->string('nombre');
+            $table->string('plan');
+            $table->string('periodo');
             $table->timestamps();
         });
     }

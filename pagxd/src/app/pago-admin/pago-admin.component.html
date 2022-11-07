@@ -18,7 +18,7 @@
               <br>
               <form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm.value)">
               <div class="form-floating mb-3">
-                  <input type="text" class="form-control" name="name" id="name" placeholder="Default input" ngModel required style="background-color:aliceblue;">
+                  <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Default input" ngModel required style="background-color:aliceblue;">
 
                   <label for="floatingInput">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
@@ -27,7 +27,7 @@
                   </label>
               </div>
               <div class="form-floating mb-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" ngModel required style="background-color:aliceblue;">
+                  <input type="email" class="form-control" name="plan" id="plan" placeholder="name@example.com" ngModel required style="background-color:aliceblue;">
 
                   <label for="floatingInput">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
@@ -42,7 +42,7 @@
               <!--------------Fin del texto--------->
               <div class="mb-3">
                   <label for="exampleFormControlTextarea1" class="form-label">Question:</label>
-                  <textarea class="form-control" name="question" id="question" ngModel required rows="3" style="background-color:aliceblue;"></textarea>
+                  <textarea class="form-control" name="periodo" id="periodo" ngModel required rows="3" style="background-color:aliceblue;"></textarea>
 
                 </div>
                 <div class="nav-item active">
@@ -65,4 +65,4 @@
         </div>
     </div>
 
-    <!--<app-form *ngFor="let usuario of usuarios; let i=index;" [empleadoL]="usuario" [indice]="i"></app-form>-->
+   

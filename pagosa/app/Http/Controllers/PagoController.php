@@ -39,9 +39,9 @@ class PagoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'question' => 'required',
+            'nombre' => 'required',
+            'plan' => 'required',
+            'periodo' => 'required',
         ]);
  
         $pago = Pagos::create($request->all());
@@ -86,9 +86,9 @@ class PagoController extends Controller
     public function update(Request $request, Pagos $pago)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'question' => 'required',
+            'nombre' => 'required',
+            'plan' => 'required',
+            'periodo' => 'required',
         ]);
  
         $pago->update($request->all());

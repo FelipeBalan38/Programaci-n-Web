@@ -1,6 +1,6 @@
 export interface Usuario{
-    id: String;
-    name: String;
-    email: String;
-    question: String;
+    _id: String;
+    nombre: String;
+    plan: String;
+    periodo: String;
 }

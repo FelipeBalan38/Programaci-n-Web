@@ -11,7 +11,7 @@ import { PagoAdminComponent } from 'src/app/pago-admin/pago-admin.component';
 })
 export class FormComponent implements OnInit {
    
-  @Input()  empleadoL!:Usuario;
+  @Input()  clienteL!:Usuario;
   @Input() indice!:number;
   
 
@@ -25,21 +25,12 @@ export class FormComponent implements OnInit {
     });
   }
 
-  onSubmit(values:Usuario):void{
-    this.addUsuario(values);
-  }
-
-  addUsuario(usuario:Usuario){
-    this.usuarioService.create(usuario).subscribe(res=>{
-        this.usuarios.push(usuario);
-      });
-  }
 
   deleteUsuario(id:String){
     //console.log("id de usuario ->"+id);
     if(confirm('¿Desea eliminar al usuario?')){
       this.usuarioService.deleteUser(id).subscribe(() => {
-        const tempArr = this.usuarios.filter(usuario => usuario.id !== id);
+        const tempArr = this.usuarios.filter(usuario => usuario._id !== id);
         this.usuarios = [...tempArr];
       });
     }
@@ -57,11 +48,9 @@ export class FormComponent implements OnInit {
   editUsuario(id:String, change:Usuario):void{
     console.log(id);
     console.log(change);
-    change.id = id;
+    change._id = id;
     this.updateUsuario(change)
   }
-  
-
   
 }
 
