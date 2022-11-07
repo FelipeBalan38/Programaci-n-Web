@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Usuario } from 'src/shared/api.service';
 import { UsuarioService } from 'src/Service/usuario.service';
 import { FormComponent } from '../PagoAdmin/form/form.component';
+
+
 @Component({
   selector: 'app-aprobado-pag',
   templateUrl: './aprobado-pag.component.html',
@@ -23,7 +25,7 @@ export class AprobadoPagComponent implements OnInit {
 
   deleteUsuario(id:String){
     //console.log("id de usuario ->"+id);
-    if(confirm('¿Desea eliminar al usuario?')){
+    if(confirm('¿Desea aprobar que ya se ha pagado?')){
       this.usuarioService.deleteUser(id).subscribe(() => {
         const tempArr = this.usuarios.filter(usuario => usuario._id !== id);
         this.usuarios = [...tempArr];
