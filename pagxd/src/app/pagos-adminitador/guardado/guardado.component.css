@@ -3,11 +3,6 @@
     margin-top: 3%;
     padding: 3%;
 }
-.register-left{
-    text-align: center;
-    color: #fff;
-    margin-top: 4%;
-}
 
 .register-right{
     background: #f8f9fa;
@@ -15,6 +10,13 @@
     border-bottom-left-radius: 10% 50%;
 }
 
+
+.register-heading{
+    text-align: center;
+    margin-top: 18%;
+    margin-bottom: -15%;
+    color: #495057;
+}
 
 .envil{
     font-family: fantasy;
@@ -35,11 +37,13 @@
     border-radius: 1.5rem;
 }
 
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+
 
 .sixt {
     border-color: #36bcf4;
@@ -50,7 +54,7 @@ nav ul {
     background-size: 400%;
     -webkit-transition: background 300ms ease-in-out;
     transition: background 300ms ease-in-out;
-    float: center;
+    float: right;
     border-radius: 1.5rem;
     width: 45%;
     margin-top: 30%;
