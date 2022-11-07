@@ -1,0 +1,26 @@
+.opcion:hover{
+    background-color: rgb(37, 150, 190);
+    color: white;
+    border-radius: 2%;
+}
+.opcion::after{
+    transition: 9s ease-in-out all;
+}
+.font
+{
+    font-family: 'Bebas Neue', cursive;
+}
+.carta
+{
+    background-color: white;
+    border-radius: 20px;
+}
+.zoom
+{
+    transition: transform 0.5s;
+}
+.zoom:hover
+{
+    transform: scale(1.11);
+    background-color:aliceblue;
+}
