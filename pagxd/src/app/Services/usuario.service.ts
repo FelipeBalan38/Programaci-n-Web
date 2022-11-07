@@ -15,13 +15,10 @@ import {Usuario} from 'src/app/shared/interfaz';
       return this.http.post<Usuario>(this.url,usuario)
     }
   
-    /*list():Observable<Usuario[]>{
+    list():Observable<Usuario[]>{
       return this.http.get<Usuario[]>(this.url)
     }
-    */
-    list():any{
-      return this.http.get(this.url)
-    }
+    
     listOne(id:String):Observable<Usuario>{
       return this.http.get<Usuario>(`${this.url}/${id}`)
     }

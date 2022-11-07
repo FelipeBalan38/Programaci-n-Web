@@ -14,14 +14,12 @@ export class PagosAdministradorComponent implements OnInit {
   constructor(private readonly usuarioService:UsuarioService) { }
 
   ngOnInit(): void {
-    //this.usuarioService.list().subscribe(usuarios=>{
-     // this.usuarios = [...usuarios];
-    //});
+    this.usuarioService.list().subscribe(usuarios=>{
+      this.usuarios = [...usuarios];
+    });
   }
   onSubmit(values:Usuario):void{
-    //this.addUsuario(values);
-    this.listUsuario();
-    console.log(values)
+    this.addUsuario(values);
   }
 
   addUsuario(usuario:Usuario){
@@ -35,8 +33,11 @@ export class PagosAdministradorComponent implements OnInit {
       console.log("Entro");
     })
   }
-  listUsuario(){
-    this.usuarioService.list();
-  }
 
+  editUsuario(id:String, change:Usuario):void{
+    console.log(id);
+    console.log(change);
+    change._id = id;
+    this.updateUsuario(change)
+  }
 }

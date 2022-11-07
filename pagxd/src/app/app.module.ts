@@ -18,12 +18,10 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AvPagoComponent } from './av-pago/av-pago.component';
-<<<<<<< Updated upstream
-=======
+import { GuardadoComponent } from './pagos-adminitador/guardado/guardado.component';
 import { PagosAdministradorComponent } from './pagos-administrador/pagos-administrador.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GuardadoComponent } from './pagos-adminitador/guardado/guardado.component';
->>>>>>> Stashed changes
+
 
 @NgModule({
   declarations: [
@@ -40,13 +38,9 @@ import { GuardadoComponent } from './pagos-adminitador/guardado/guardado.compone
     FormularioComponent,
     FondPComponent,
     HomeComponent,
-<<<<<<< Updated upstream
-    AvPagoComponent
-=======
     AvPagoComponent,
     PagosAdministradorComponent,
     GuardadoComponent
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
