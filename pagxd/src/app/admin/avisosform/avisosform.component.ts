@@ -18,10 +18,12 @@ export class AvisosformComponent implements OnInit {
       this.avisos = [...avisos];
     });
   }
-
-  onSubmit(avisos:Aviso):void{
-    this.avisosService.addNewAviso(avisos).subscribe(res=>{
-      this.avisos.push(avisos);
-    });
+  onSubmit(values:Aviso):void{
+    this.addAviso(values);
   }
+  addAviso(aviso:Aviso){
+    this.avisosService.addNewAviso(aviso).subscribe(res=>{
+        this.avisos.push(aviso);
+      });
+    }
 }

@@ -9,7 +9,7 @@ import {Aviso} from 'src/app/shared/interface';
 export class AvisosService {
 
   avisos!: Aviso;
-  private readonly API = 'https://crudcrud.com/api/56b6652e100244de9fa8c29e60462ca4/avisos'; 
+  private readonly API = 'http://127.0.0.1:8000/api/avisos'; 
   
   constructor(private readonly http:HttpClient) { }
 
