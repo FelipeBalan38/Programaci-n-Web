@@ -25,7 +25,7 @@ export class AprobadoPagComponent implements OnInit {
 
   deleteUsuario(id:String){
     //console.log("id de usuario ->"+id);
-    if(confirm('¿Desea aprobar que ya se ha pagado?')){
+    if(confirm('¿Desea aprovar el pago?')){
       this.usuarioService.deleteUser(id).subscribe(() => {
         const tempArr = this.usuarios.filter(usuario => usuario._id !== id);
         this.usuarios = [...tempArr];
