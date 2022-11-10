@@ -5,6 +5,7 @@ import { PrincipalComponent } from './admin/principal/principal.component';
 import { EnviadoComponent } from './AtencionC/enviado/enviado.component';
 import { AvPagoComponent } from './av-pago/av-pago.component';
 import { HomeComponent } from './home/home.component';
+import { AvisosComponent } from './section/avisos/avisos.component';
 import { CrearavisoComponent } from './section/crearaviso/crearaviso.component';
 import { FondPComponent } from './section/fond-p/fond-p.component';
 import { InformacionComponent } from './section/informacion/informacion.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'Admin', component:PrincipalComponent},
   {path: 'Adm', component:AvisosformComponent},
   {path: 'AdminAvisos', component:CrearavisoComponent},
+  {path: 'Avisos', component:AvisosComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 

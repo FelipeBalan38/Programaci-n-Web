@@ -22,6 +22,7 @@ import { PrincipalComponent } from './admin/principal/principal.component';
 import { AvisosformComponent } from './admin/avisosform/avisosform.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CrearavisoComponent } from './section/crearaviso/crearaviso.component';
+import { AvisosComponent } from './section/avisos/avisos.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { CrearavisoComponent } from './section/crearaviso/crearaviso.component';
     AvPagoComponent,
     PrincipalComponent,
     AvisosformComponent,
-    CrearavisoComponent
+    CrearavisoComponent,
+    AvisosComponent
   ],
   imports: [
     BrowserModule,

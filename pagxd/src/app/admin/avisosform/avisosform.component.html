@@ -1,5 +1,6 @@
-<p>avisosform works!</p>
-<form #avisosForm="ngForm" (ngSubmit)="onSubmit(avisosForm.value)">
+
+<H1 class="letra">avisos</H1>
+<form  class= "container"#avisosForm="ngForm" (ngSubmit)="onSubmit(avisosForm.value)">
     <div class="form-floating mb-3">
         <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Default input" ngModel required style="background-color:aliceblue;">
 
@@ -17,23 +18,23 @@
       </div>
       
       <div class="row justify-content-center">
-        <div class="col-4">
-          <button type="submit" class="btn btn-primary ps-5 pe-5">Continue</button>
+        <div class="col-4" style="text-align:center">
+          <button type="submit" class="btn btn-primary ps-5 pe-5">Aceptar</button>
         </div>
       </div>
     </form>
 
     <div class="container">
-        <table class="table">
+        <table class="table  celdas">
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Email</th>
+              <th scope="col">Titulo</th>
+              <th scope="col">Nota</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let aviso of avisos; let i=index;">
+            <tr *ngFor="let aviso of avisos.slice().reverse(); let i=index;">
               <td>{{i+1}}</td>
               <td>{{aviso.titulo}}</td>
               <td>{{aviso.nota}}</td>
