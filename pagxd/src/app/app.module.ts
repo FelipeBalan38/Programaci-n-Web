@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './section/header/header.component';
@@ -22,6 +21,10 @@ import { PrincipalComponent } from './admin/principal/principal.component';
 import { AvisosformComponent } from './admin/avisosform/avisosform.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdmiUsuariosComponent } from './admin/admi-usuarios/admi-usuarios.component';
+import { AdminusersComponent } from './admin/adminusers/adminusers.component';
+import { AdminquejasComponent } from './admin/adminquejas/adminquejas.component';
+import { AdminpagosComponent } from './admin/adminpagos/adminpagos.component';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { AdmiUsuariosComponent } from './admin/admi-usuarios/admi-usuarios.compo
     PrincipalComponent,
     AvisosformComponent,
     AdmiUsuariosComponent
+    AdminusersComponent,
+    AdminquejasComponent,
+    AdminpagosComponent
   ],
   imports: [
     BrowserModule,

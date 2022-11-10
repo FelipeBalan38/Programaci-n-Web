@@ -6,16 +6,14 @@
 .opcion::after{
     transition: 9s ease-in-out all;
 }
-<<<<<<< Updated upstream
-=======
 button{
     height: 100%;
     width: 95%;
 }
->>>>>>> Stashed changes
 .font
 {
     font-family: 'Bebas Neue', cursive;
+    color: white;
 }
 .carta
 {
