@@ -5,9 +5,10 @@ export interface Aviso{
 }
 export interface Usuario{
     _id: String;
-    name: String;
+    nombre: String;
     apellido: String;
     email: String;
     telefono: number;
     plan:string;
+    periodo:string;
 }
