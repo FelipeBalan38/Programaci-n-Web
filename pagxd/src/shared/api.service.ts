@@ -3,4 +3,5 @@ export interface Usuario{
     nombre: String;
     plan: String;
     periodo: String;
+    tele: String;
 }

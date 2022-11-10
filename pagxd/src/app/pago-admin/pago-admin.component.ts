@@ -31,7 +31,6 @@ export class PagoAdminComponent implements OnInit {
         this.usuarios.push(usuario);
       });
   }
-
 }
 
 

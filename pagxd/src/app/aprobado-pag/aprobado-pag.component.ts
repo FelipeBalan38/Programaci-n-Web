@@ -48,4 +48,5 @@ export class AprobadoPagComponent implements OnInit {
     change._id = id;
     this.updateUsuario(change)
   }
+  
 }
