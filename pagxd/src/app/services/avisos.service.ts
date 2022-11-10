@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {Aviso} from 'src/app/shared/interface';
+import {Aviso, Usuario} from 'src/app/shared/interface';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +25,25 @@ export class AvisosService {
   }
   deleteAviso(id: string): Observable<void>{
     return this.http.delete<void>(`${this.API}/${id}`);
+  }
+  create(usuario:Usuario):Observable<Usuario>{
+    return this.http.post<Usuario>(this.API,usuario)
+  }
+
+  list():Observable<Usuario[]>{
+    return this.http.get<Usuario[]>(this.API)
+  }
+  
+  listOne(id:String):Observable<Usuario>{
+    return this.http.get<Usuario>(`${this.API}/${id}`)
+  }
+
+  updateUser(usuario:Usuario):Observable<void>{
+    return this.http.put<void>(`${this.API}/${usuario._id}`,usuario)
+  }
+
+  deleteUser(id:String):Observable<void>{
+    return this.http.delete<void>(`${this.API}/${id}`)
   }
 
 }

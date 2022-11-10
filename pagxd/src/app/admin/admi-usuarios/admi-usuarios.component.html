@@ -1,0 +1,49 @@
+<div>
+    <app-header></app-header>
+    <div
+    
+class="bg-image mb-1"
+style=" background-image: url(https://img.freepik.com/foto-gratis/banner-fondo-azul-perfecto-canva_1361-3591.jpg?w=1380&t=st=1663546164~exp=1663546764~hmac=44bacda9fdbb8fd7cc647ae35d3fcf3d56b3522c33dd1ee9148c72b6b28abdeb); height: auto; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;
+background-position: center;">
+<div class="mask p-1" style="background-color:rgb(0, 155, 219,0.6) ; height: auto;">
+    <div class="container-fluid register" > 
+        <div class="row">  
+          <h1 class="tipo">Administracion de usuarios</h1>   
+            <div class="register-left">
+            <form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm.value)">
+              <div class="container colocar letra">
+                  <label for="exampleFormControlInput1" class="form-label">Plan</label>
+                  <input type="" class="form-control" name="Plan" id="Plan" placeholder="Escribe el Plan" ngModel required>
+                </div>
+            <div class="container colocar letra">
+                <label for="exampleFormControlInput1" class="form-label">Nombre de cliente</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Nombre"ngModel required>
+              </div>
+              <div class="container colocar letra">
+                <label for="exampleFormControlInput1" class="form-label">Apellidos de cliente</label>
+                <input type="text" class="form-control"name="apellido" id="apellido" placeholder="Apellido"ngModel required>
+              </div>
+              <div class="container colocar letra">
+                <label for="exampleFormControlInput1" class="for-label">Correo</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electronico" ngModel required>
+              </div>
+              <div class="container mb-3 colocar letra">
+                <label for="datapicker" class="form-label">Fecha de Registro</label>
+                <input type="date" class="form-control" name="fecha" id="fecha" placeholder="DD/MM/AA" ngModel required>
+              </div>
+              <div class="container colocar letra">
+                <label for="exampleFormControlInput1" class="for-label">Telefono</label>
+                <input type="number" class="form-control" name="telefono" id="telefono" placeholder="telefono" maxlength="10" minlength="10" ngModel required>
+              </div>
+              <div class="container mb-3 coloca">
+              <div class="nav-item active btn-center">
+                <button type="submit" class="btn btn-primary">Cargar</button>
+              </div>
+            </div>
+          </form>
+            </div>
+        </div>  
+        </div>
+    
+</div>
+
