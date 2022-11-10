@@ -4,5 +4,5 @@ export interface Usuario{
     apellido: String;
     email: String;
     telefono: number;
-    plan: String;
+    plan:string;
 }

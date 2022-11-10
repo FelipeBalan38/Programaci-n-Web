@@ -8,7 +8,7 @@ import {Usuario} from 'src/app/shared/interfaz';
   export class UsuarioService {
   
     usuario!: Usuario
-    private readonly url = 'https://crudcrud.com/api/12b15092a0874baa91cf49115666265c/usuarios'; 
+    private readonly url = 'https://crudcrud.com/api/e711b9f488e74aceb9a304fbb455bad3/usuarios'; 
     constructor(private readonly http:HttpClient) { }
   
     create(usuario:Usuario):Observable<Usuario>{
