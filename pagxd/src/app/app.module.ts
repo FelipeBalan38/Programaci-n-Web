@@ -44,7 +44,7 @@ import { AdminpagosComponent } from './admin/adminpagos/adminpagos.component';
     AvPagoComponent,
     PrincipalComponent,
     AvisosformComponent,
-    AdmiUsuariosComponent
+    AdmiUsuariosComponent,
     AdminusersComponent,
     AdminquejasComponent,
     AdminpagosComponent
