@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AvisosService } from 'src/app/services/avisos.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UsuarioService } from 'src/app/services/usuario.Service';
 import { Usuario} from 'src/app/shared/interface';
 
 @Component({
@@ -8,11 +9,11 @@ import { Usuario} from 'src/app/shared/interface';
   styleUrls: ['./admi-usuarios.component.css']
 })
 export class AdmiUsuariosComponent implements OnInit {
-  usuarios: Usuario[] = [];
-  constructor(private readonly avisosService:AvisosService) { }
 
+  usuarios: Usuario[] = [];
+  constructor(private readonly usuarioService:UsuarioService) { }
   ngOnInit(): void {
-    this.avisosService.list().subscribe(usuarios=>{
+    this.usuarioService.list().subscribe(usuarios=>{
       this.usuarios = [...usuarios];
     });
   }
@@ -21,24 +22,10 @@ export class AdmiUsuariosComponent implements OnInit {
   }
 
   addUsuario(usuario:Usuario){
-    this.avisosService.create(usuario).subscribe(res=>{
+    this.usuarioService.create(usuario).subscribe(res=>{
         this.usuarios.push(usuario);
       });
       console.log("AAAAAAAAAAAAAAAAAAAAAAAAAA");
       
   }
-
-  updateUsuario(usuario:Usuario){
-    this.avisosService.updateUser(usuario).subscribe(res =>{
-      console.log("Entro");
-    })
-  }
-
-  editUsuario(id:String, change:Usuario):void{
-    console.log(id);
-    console.log(change);
-    change._id = id;
-    this.updateUsuario(change)
-  }
-
 }

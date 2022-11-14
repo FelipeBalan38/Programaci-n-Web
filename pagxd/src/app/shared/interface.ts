@@ -8,7 +8,7 @@ export interface Usuario{
     nombre: String;
     apellido: String;
     email: String;
-    telefono: number;
+    telefono: string;
     plan:string;
     periodo:string;
 }

@@ -45,6 +45,7 @@ export class AdminpagosComponent implements OnInit {
     change._id = id;
     this.updateUsuario(change)
   }
+
   
 }
 

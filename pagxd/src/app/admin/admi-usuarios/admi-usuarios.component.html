@@ -7,38 +7,66 @@ background-position: center;">
 <div class="mask p-1" style="background-color:rgb(0, 155, 219,0.6) ; height: auto;">
     <div class="container-fluid register" > 
         <div class="row">  
-          <h1 class="tipo">Administracion de usuarios</h1>   
+          <h1 class="tipo">Registro de usuarios</h1>   
             <div class="register-left">
-            <form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm.value)">
+            <form  #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm.value)"method="post">
+              <div class="forms-group">
               <div class="container colocar letra">
                   <label for="exampleFormControlInput1" class="form-label">Plan</label>
-                  <input type="" class="form-control" name="Plan" id="Plan" placeholder="Escribe el Plan" ngModel required>
+                  <input type="" class="form-control" name="plan" id="plan" placeholder="Escribe el Plan" ngModel #Plan="ngModel" #_Plan required minlength="1" maxlength="1">
+                </div>
+                <div *ngIf="Plan.invalid && (Plan.dirty || Plan.touched)">
+                  <div *ngIf="Plan.errors?.['required']" class="alert alert-danger">plan requerido</div>
+                <div [hidden]="!Plan.errors?.['minlength']" class="alert alert-danger">El campo necesita 1 caracter minimo</div>
                 </div>
             <div class="container colocar letra">
                 <label for="exampleFormControlInput1" class="form-label">Nombre de cliente</label>
-                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre"ngModel required>
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" ngModel #nombre="ngModel" #_nombre required minlength="3">
+              </div>
+              <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div *ngIf="nombre.errors?.['required']" class="alert alert-danger">Nombre Requerido</div>
+                <div [hidden]="!nombre.errors?.['minlength']" class="alert alert-danger">El nombre necesita 3 caracteres como minimo</div>
               </div>
               <div class="container colocar letra">
                 <label for="exampleFormControlInput1" class="form-label">Apellidos de cliente</label>
-                <input type="text" class="form-control"name="apellido" id="apellido" placeholder="Apellido"ngModel required>
+                <input type="text" class="form-control"name="apellido" id="apellido" placeholder="Apellido" ngModel #apellido="ngModel" #_apellido required minlength="3">  
+              </div>
+              <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)">
+                <div *ngIf="apellido.errors?.['required']" class="alert alert-danger">Apellido Requerido</div>
+                <div [hidden]="!apellido.errors?.['minlength']" class="alert alert-danger">el campo Apellido necesita 3 caracteres como minimo</div>
               </div>
               <div class="container colocar letra">
                 <label for="exampleFormControlInput1" class="for-label">Correo</label>
-                <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electronico" ngModel required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electronico" ngModel #email="ngModel" #_email required minlength="3">
+              </div>
+              <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                <div *ngIf="email.errors?.['required']" class="alert alert-danger">Correo Requerido</div>
+                <div [hidden]="!email.errors?.['minlength']" class="alert alert-danger">el campo correo necesita minimo 3 caracteres</div>
               </div>
               <div class="container mb-3 colocar letra">
                 <label for="datapicker" class="form-label">Fecha de Registro</label>
-                <input type="date" class="form-control" name="fecha" id="fecha" placeholder="DD/MM/AA" ngModel required>
+                <input type="date" class="form-control" name="periodo" id="periodo" placeholder="DD/MM/AA" ngModel #periodo="ngModel" #_periodo required minlength="3">
+              </div>
+              <div *ngIf="periodo.invalid && (periodo.dirty || periodo.touched)">
+                <div *ngIf="periodo.errors?.['required']" class="alert alert-danger"> Fecha Requerida</div>
+                <div [hidden]="!periodo.errors?.['minlength']" class="alert alert-danger">El campo fecha necesita minimo 3 caracteres</div>
               </div>
               <div class="container colocar letra">
                 <label for="exampleFormControlInput1" class="for-label">Telefono</label>
-                <input type="number" class="form-control" name="telefono" id="telefono" placeholder="telefono" maxlength="10" minlength="10" ngModel required>
+                <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="telefono" ngModel #telefono="ngModel" #_telefono required minlength="10" maxlength="10">
               </div>
+              <div *ngIf="telefono.invalid && (telefono.dirty||telefono.touched)">
+                <div *ngIf="telefono.errors?.['required']" class="alert alert-danger">Telefono Requerido</div>
+                <div [hidden]="!telefono.errors?.['minlength']" class="alert alert-danger">El campo telefono necesita minimo 10 numeros</div>
+              </div>
+              </div>
+              <div class="form-group">
               <div class="container mb-3 coloca">
               <div class="nav-item active btn-center">
-                <button type="submit" class="btn btn-primary">Cargar</button>
+                <button type="submit" class="btn btn-primary" [disabled]="!usuarioForm.form.valid">Cargar</button>
               </div>
             </div>
+          </div>
           </form>
             </div>
         </div>  

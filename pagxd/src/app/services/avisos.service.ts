@@ -9,7 +9,7 @@ import {Aviso, Usuario} from 'src/app/shared/interface';
 export class AvisosService {
 
   avisos!: Aviso;
-  private readonly API = 'https://crudcrud.com/api/56b6652e100244de9fa8c29e60462ca4/avisos'; 
+  private readonly API = 'http://127.0.0.1:8000/api/usuarios'; 
   
   constructor(private readonly http:HttpClient) { }
 
@@ -25,25 +25,6 @@ export class AvisosService {
   }
   deleteAviso(id: string): Observable<void>{
     return this.http.delete<void>(`${this.API}/${id}`);
-  }
-  create(usuario:Usuario):Observable<Usuario>{
-    return this.http.post<Usuario>(this.API,usuario)
-  }
-
-  list():Observable<Usuario[]>{
-    return this.http.get<Usuario[]>(this.API)
-  }
-  
-  listOne(id:String):Observable<Usuario>{
-    return this.http.get<Usuario>(`${this.API}/${id}`)
-  }
-
-  updateUser(usuario:Usuario):Observable<void>{
-    return this.http.put<void>(`${this.API}/${usuario._id}`,usuario)
-  }
-
-  deleteUser(id:String):Observable<void>{
-    return this.http.delete<void>(`${this.API}/${id}`)
   }
 
 }

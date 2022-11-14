@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdmiUsuariosComponent } from './admin/admi-usuarios/admi-usuarios.component';
 import { AdminpagosComponent } from './admin/adminpagos/adminpagos.component';
 import { AdminquejasComponent } from './admin/adminquejas/adminquejas.component';
 import { AdminusersComponent } from './admin/adminusers/adminusers.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'AdminAvisos', component:AvisosformComponent},
   {path: 'AdminPagos', component:AdminpagosComponent},
   {path: 'AdminQuejas', component:AdminquejasComponent},
+  {path:'usuario',component:AdmiUsuariosComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 
