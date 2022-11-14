@@ -21,9 +21,11 @@ export class AdminquejasComponent implements OnInit {
   }
 
   deleteQueja(id:number){
-    this.QuejaService.delete(id).subscribe(res => {
+    if(confirm('¿Se ha solucionado el problema?')){
+      this.QuejaService.delete(id).subscribe(res => {
       this.quejas = this.quejas.filter(item => item.id !== id);
-      console.log('Person deleted successfully!');
- })
+      console.log('Queja deleted successfully!');
+      })
+    }
   }
 }

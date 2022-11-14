@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminusersComponent } from './admin/adminusers/adminusers.component';
 import { AdminquejasComponent } from './admin/adminquejas/adminquejas.component';
 import { AdminpagosComponent } from './admin/adminpagos/adminpagos.component';
+import { NavbarComponent } from './admin/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AdminpagosComponent } from './admin/adminpagos/adminpagos.component';
     AvisosformComponent,
     AdminusersComponent,
     AdminquejasComponent,
-    AdminpagosComponent
+    AdminpagosComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
