@@ -9,7 +9,7 @@ import {Aviso} from 'src/app/shared/interface';
 export class AvisosService {
 
   avisos!: Aviso;
-  private readonly API = 'https://crudcrud.com/api/ea78a2c5245143369d8d597018518aa0/avisos'; 
+  private readonly API = 'http://127.0.0.1:8000/api/avisos'; 
   
   constructor(private readonly http:HttpClient) { }
 
@@ -23,7 +23,7 @@ export class AvisosService {
     const body = {titulo: avisos.titulo};
     return this.http.put<void>(`${this.API}/${avisos.id}`, body);
   }
-  deleteAviso(id: string): Observable<void>{
+  deleteAviso(id: String): Observable<void>{
     return this.http.delete<void>(`${this.API}/${id}`);
   }
 

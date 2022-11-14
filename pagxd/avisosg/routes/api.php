@@ -2,8 +2,14 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AvisoController;
-Route::resource('avisos', AvisoController::class);
+use App\Http\Controllers\API\AvController;
+Route::prefix('avisos')->group(function () {
+Route::get('/',[ AvController::class, 'getAll']);
+Route::post('/',[ AvController::class, 'create']);
+Route::delete('/{id}',[ AvController::class, 'delete']);
+Route::get('/{id}',[ AvController::class, 'get']);
+Route::put('/{id}',[ AvController::class, 'update']);
+});
 /*
 |--------------------------------------------------------------------------
 | API Routes

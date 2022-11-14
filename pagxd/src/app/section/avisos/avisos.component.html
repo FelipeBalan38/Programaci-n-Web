@@ -11,14 +11,13 @@ background-position: center;">
 <h1 class="letra" style="text-align:center; margin-top: 20px;"> AVISOS</h1>
 
 <div class="container">
-    <table class="table  celdas">
+    <table class="table  celdas"  *ngFor="let aviso of avisos.slice().reverse(); let i=index;">
       <tbody>
-        <tr *ngFor="let aviso of avisos.slice().reverse(); let i=index;">
+        
           <td></td>
           <td><h1 class="letra"> {{aviso.titulo}}</h1>
             <p style="margin-top: 10px">{{aviso.nota}}</p></td>
-      
-        </tr>
+        
       </tbody>
     </table>
   </div>

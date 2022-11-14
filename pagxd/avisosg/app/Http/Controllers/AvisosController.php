@@ -13,11 +13,9 @@ class AvisosController extends Controller
      */
     public function index()
     {
-        $blogs = avisos::latest()->paginate(10);
-        return [
-            "status" => 1,
-            "data" => $blogs
-        ];
+        $blogs = avisos::all();
+        return $blogs;
+     
     }
  
     /**
@@ -44,10 +42,7 @@ class AvisosController extends Controller
         ]);
  
         $blog = avisos::create($request->all());
-        return [
-            "status" => 1,
-            "data" => $blog
-        ];
+
     }
  
     /**
@@ -58,10 +53,7 @@ class AvisosController extends Controller
      */
     public function show(avisos $blog)
     {
-        return [
-            "status" => 1,
-            "data" =>$blog
-        ];
+  
     }
  
     /**
@@ -107,10 +99,6 @@ class AvisosController extends Controller
     public function destroy(avisos $blog)
     {
         $blog->delete();
-        return [
-            "status" => 1,
-            "data" => $blog,
-            "msg" => "Blog deleted successfully"
-        ];
+  
     }
 }

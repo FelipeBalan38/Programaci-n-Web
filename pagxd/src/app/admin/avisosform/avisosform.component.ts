@@ -8,6 +8,7 @@ import { AvisosService } from 'src/app/services/avisos.service';
   styleUrls: ['./avisosform.component.css']
 })
 export class AvisosformComponent implements OnInit {
+[x: string]: any;
 
   avisos!:Aviso[];
 
@@ -25,5 +26,15 @@ export class AvisosformComponent implements OnInit {
     this.avisosService.addNewAviso(aviso).subscribe(res=>{
         this.avisos.push(aviso);
       });
+    }
+
+    deleteAviso(id:String){
+      //console.log("id de usuario ->"+id);
+      if(confirm('¿Desea aprovar el pago?')){
+        this.avisosService.deleteAviso(id).subscribe(() => {
+          const tempArr = this.avisos.filter(aviso => aviso.id !== id);
+          this.avisos = [...tempArr];
+        });
+      }
     }
 }

@@ -1,5 +1,5 @@
 
-<H1 class="letra">avisos</H1>
+<H1 class="letra"> Crear avisos</H1>
 <form  class= "container"#avisosForm="ngForm" (ngSubmit)="onSubmit(avisosForm.value)">
     <div class="form-floating mb-3">
         <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Default input" ngModel required style="background-color:aliceblue;">
@@ -31,6 +31,7 @@
               <th scope="col">#</th>
               <th scope="col">Titulo</th>
               <th scope="col">Nota</th>
+
             </tr>
           </thead>
           <tbody>
@@ -38,6 +39,7 @@
               <td>{{i+1}}</td>
               <td>{{aviso.titulo}}</td>
               <td>{{aviso.nota}}</td>
+               <button type="button" class="btn btn m-1" (click)="deleteAviso(aviso.id)"> f</button>
             </tr>
           </tbody>
         </table>
