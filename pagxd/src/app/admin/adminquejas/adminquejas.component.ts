@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Queja } from 'src/app/shared/interface';
+import { QuejaService } from 'src/app/queja/queja.service';
 
 @Component({
   selector: 'app-adminquejas',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminquejasComponent implements OnInit {
 
-  constructor() { }
+  quejas: Queja[] = [];
+
+  constructor(private QuejaService:QuejaService) { }
 
   ngOnInit(): void {
+    this.QuejaService.getAll().subscribe((data: Queja[])=>{
+      this.quejas = data;
+      console.log(this.quejas);
+    })
   }
 
+  deleteQueja(id:number){
+    this.QuejaService.delete(id).subscribe(res => {
+      this.quejas = this.quejas.filter(item => item.id !== id);
+      console.log('Person deleted successfully!');
+ })
+  }
 }

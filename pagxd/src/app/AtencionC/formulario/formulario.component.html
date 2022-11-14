@@ -33,13 +33,13 @@
                                 </div>
                                 
                                     <fieldset>
-                                        <form name="CISCO" class="was-validated"  method="post" [formGroup]="newForm" (ngSubmit)="onSubmit()">
+                                        <form name="CISCO" class="was-validated"  method="post" [formGroup]="form" (ngSubmit)="onSubmit()">
                                         <div class="form-group">
                                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                                             
                                             <div class="col-md-6 position-relative">
                                                 <label for="fname" class="form-label"></label>
-                                                <input id="fname" name="name" type="text" placeholder="Teléfono" class="form-control" value=""  formControlName="telf" maxlength="10" minlength="10" required>
+                                                <input id="telf" name="telf" type="text" placeholder="Teléfono" class="form-control" value=""  formControlName="telf" maxlength="10" minlength="10" required>
                                                 
                                                 <div class="invalid-tooltip">
                                                 Por favor escriba un numero de contacto
@@ -53,7 +53,7 @@
                                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
                                             <div class="col-md-8 position-relative">
                                                 <label for="message" class="form-label"></label>
-                                            <textarea class="form-control" id="message" name="message" placeholder="Describe el problema detalladamente" formControlName="mensage"  rows="7" required></textarea>
+                                            <textarea class="form-control" id="mensage" name="mensage" placeholder="Describe el problema detalladamente" formControlName="mensage"  rows="7" required></textarea>
                                             <div class="invalid-tooltip">
                                                 Por favor describa su problema
                                               
@@ -64,7 +64,7 @@
                                             <a class="btn fourth" routerLinkActive="active" routerLink="/home"><p class="envil mb-1"><span style="text-align:end;">CANCELAR</span></p></a>
                                         </div>
                                         <div class="nav-item active">
-                                            <button class="btn fift"  type="submit" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/Envio"  [disabled]="!newForm.valid" ><p class="test mb-1" >ENVIAR</p></button>
+                                            <button class="btn fift"  type="submit" [disabled]="!form.valid"><p class="test mb-1" >ENVIAR</p></button>
                                             </div>
                                             
                                     </form>  

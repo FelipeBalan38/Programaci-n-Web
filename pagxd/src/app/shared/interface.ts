@@ -11,3 +11,8 @@ export interface Usuario{
     telefono: number;
     plan:string;
 }
+export interface Queja{
+    id: number;
+    telf: number;
+    mensage: String;
+}
