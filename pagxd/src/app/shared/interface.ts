@@ -4,7 +4,7 @@ export interface Aviso{
     nota:String;
 }
 export interface Usuario{
-    _id: String;
+    id: number;
     nombre: String;
     apellido: String;
     email: String;

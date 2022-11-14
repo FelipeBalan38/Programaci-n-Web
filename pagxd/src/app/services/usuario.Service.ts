@@ -25,10 +25,10 @@ export class UsuarioService {
   }
 
   updateUser(usuario:Usuario):Observable<void>{
-    return this.http.put<void>(`${this.url}/${usuario._id}`,usuario)
+    return this.http.put<void>(`${this.url}/${usuario.id}`,usuario)
   }
 
-  deleteUser(id:String):Observable<void>{
+  deleteUser(id:number):Observable<void>{
     return this.http.delete<void>(`${this.url}/${id}`)
   }
 }

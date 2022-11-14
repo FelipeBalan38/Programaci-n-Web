@@ -20,12 +20,12 @@ export class AdminpagosComponent implements OnInit {
   }
 
 
-  deleteUsuario(id:String){
+  deleteUsuario(id:number){
     //console.log("id de usuario ->"+id);
     if(confirm('¿Desea aprovar el pago?')){
-      this.usuarioService.deleteUser(id).subscribe(() => {
-        const tempArr = this.usuarios.filter(usuario => usuario._id !== id);
-        this.usuarios = [...tempArr];
+      this.usuarioService.deleteUser(id).subscribe(res=>{
+        this.usuarios=this.usuarios.filter(item => item.id !==id);
+        console.log("Queja deleted succesfully")
       });
     }
   }
@@ -36,16 +36,7 @@ export class AdminpagosComponent implements OnInit {
       //const tempArr = this.usuarios.filter(values => values._id !== usuario._id);
       //this.usuarios = [...tempArr,usuario];
       console.log("Entro");
-    })
+    });
   }
-
-  editUsuario(id:String, change:Usuario):void{
-    console.log(id);
-    console.log(change);
-    change._id = id;
-    this.updateUsuario(change)
-  }
-
-  
 }
 

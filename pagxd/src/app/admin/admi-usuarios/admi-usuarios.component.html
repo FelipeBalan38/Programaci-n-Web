@@ -28,7 +28,7 @@ background-position: center;">
                 <div [hidden]="!nombre.errors?.['minlength']" class="alert alert-danger">El nombre necesita 3 caracteres como minimo</div>
               </div>
               <div class="container colocar letra">
-                <label for="exampleFormControlInput1" class="form-label">Apellidos de cliente</label>
+                <label for="exampleFormControlInput1" class="form-label">Apellido de cliente</label>
                 <input type="text" class="form-control"name="apellido" id="apellido" placeholder="Apellido" ngModel #apellido="ngModel" #_apellido required minlength="3">  
               </div>
               <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)">
