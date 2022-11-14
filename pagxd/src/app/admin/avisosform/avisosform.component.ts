@@ -30,11 +30,24 @@ export class AvisosformComponent implements OnInit {
 
     deleteAviso(id:String){
       //console.log("id de usuario ->"+id);
-      if(confirm('¿Desea aprovar el pago?')){
+      if(confirm('¿Desea eliminar el elemento?')){
         this.avisosService.deleteAviso(id).subscribe(() => {
           const tempArr = this.avisos.filter(aviso => aviso.id !== id);
           this.avisos = [...tempArr];
         });
       }
+    }
+
+    updateAviso( id:String ,aviso:Aviso){
+      this.avisosService.updateAviso(id, aviso).subscribe(res =>{
+        console.log("Entro");
+      })
+    }
+  
+    editAviso(id:String, change:Aviso):void{
+      console.log(id);
+      console.log(change);
+      change.id = id;
+      this.updateAviso(id, change)
     }
 }

@@ -36,10 +36,17 @@
           </thead>
           <tbody>
             <tr *ngFor="let aviso of avisos.slice().reverse(); let i=index;">
+
+              
               <td>{{i+1}}</td>
               <td>{{aviso.titulo}}</td>
               <td>{{aviso.nota}}</td>
-               <button type="button" class="btn btn m-1" (click)="deleteAviso(aviso.id)"> f</button>
+             <td>
+              <button type="button" class="btn bteditar" (click)="updateAviso(aviso.id, avisosForm.value)">Editar</button>
+            </td>
+            <td>
+              <button type="button" class="btn bteliminar" (click)="deleteAviso(aviso.id)">Eliminar</button>
+            </td>
             </tr>
           </tbody>
         </table>
