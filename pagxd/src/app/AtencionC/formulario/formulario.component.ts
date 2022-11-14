@@ -17,8 +17,8 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      mensage: new FormControl('', Validators.required),
-      telf: new FormControl('', Validators.required)
+      telf: new FormControl('', Validators.required),
+      mensage: new FormControl('', Validators.required)
     })
   }
 
