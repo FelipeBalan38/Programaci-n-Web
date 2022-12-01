@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminpagosComponent } from './admin/adminpagos/adminpagos.component';
 import { AdminquejasComponent } from './admin/adminquejas/adminquejas.component';
+import { QuejasatenComponent } from './admin/adminquejas/quejasaten/quejasaten.component';
 import { AdminusersComponent } from './admin/adminusers/adminusers.component';
 import { AvisosformComponent } from './admin/avisosform/avisosform.component';
 import { PrincipalComponent } from './admin/principal/principal.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'AdminAvisos', component:AvisosformComponent},
   {path: 'AdminPagos', component:AdminpagosComponent},
   {path: 'AdminQuejas', component:AdminquejasComponent},
+  {path: 'QuejasAtendidas', component:QuejasatenComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 

@@ -25,6 +25,8 @@ import { AdminusersComponent } from './admin/adminusers/adminusers.component';
 import { AdminquejasComponent } from './admin/adminquejas/adminquejas.component';
 import { AdminpagosComponent } from './admin/adminpagos/adminpagos.component';
 import { NavbarComponent } from './admin/navbar/navbar.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { QuejasatenComponent } from './admin/adminquejas/quejasaten/quejasaten.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { NavbarComponent } from './admin/navbar/navbar.component';
     AdminusersComponent,
     AdminquejasComponent,
     AdminpagosComponent,
-    NavbarComponent
+    NavbarComponent,
+    FilterPipe,
+    QuejasatenComponent
   ],
   imports: [
     BrowserModule,

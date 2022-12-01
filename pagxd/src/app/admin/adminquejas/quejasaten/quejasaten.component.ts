@@ -3,12 +3,12 @@ import { Queja } from 'src/app/shared/interface';
 import { QuejaService } from 'src/app/queja/queja.service';
 
 @Component({
-  selector: 'app-adminquejas',
-  templateUrl: './adminquejas.component.html',
-  styleUrls: ['./adminquejas.component.css']
+  selector: 'app-quejasaten',
+  templateUrl: './quejasaten.component.html',
+  styleUrls: ['./quejasaten.component.css']
 })
-export class AdminquejasComponent implements OnInit {
-
+export class QuejasatenComponent implements OnInit {
+  
   quejas: Queja[] = [];
 
   constructor(private QuejaService:QuejaService) { }
