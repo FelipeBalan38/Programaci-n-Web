@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { UsuarioService } from 'src/app/services/usuario.Service';
-import { Usuario} from 'src/app/shared/interface';
+import { Component, OnInit, Input } from '@angular/core';
+import { Pago } from 'src/app/shared/interface';
+import { PagoService } from 'src/app/services/pago.service';
 
 @Component({
   selector: 'app-admi-usuarios',
@@ -10,23 +9,29 @@ import { Usuario} from 'src/app/shared/interface';
 })
 export class AdmiUsuariosComponent implements OnInit {
 
-  usuarios: Usuario[] = [];
-  constructor(private readonly usuarioService:UsuarioService) { }
+  
+  [x: string]: any;
+
+  pagos!:Pago[];
+
+  constructor(private PagoService:PagoService) { }
+  
   ngOnInit(): void {
-    this.usuarioService.list().subscribe(usuarios=>{
-      this.usuarios = [...usuarios];
+    this.PagoService.getPagos().subscribe(pagos=>{
+      this.pagos = [...pagos];
     });
   }
-  onSubmit(values:Usuario):void{
-    this.addUsuario(values);
+
+  onSubmit(values:Pago):void{
+    this.addPago(values);
   }
 
-  addUsuario(usuario:Usuario){
-    this.usuarioService.create(usuario).subscribe(res=>{
-        this.usuarios.push(usuario);
+  addPago(pago:Pago){
+    this.PagoService.addNewPago(pago).subscribe(res=>{
+        this.pagos.push(pago);
       });
-      console.log("AAAAAAAAAAAAAAAAAAAAAAAAAA");
-      
   }
+//////////////////////////////////////////////////////////////////////
+
   
 }

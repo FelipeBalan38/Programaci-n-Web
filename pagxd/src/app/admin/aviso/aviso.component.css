@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.celdas{
+margin-top: 20px;
+background-color: rgba(0, 0, 0, 0.4);
+color: white;
+border-radius: 5px;;
+}
+.letra{
+    color: rgb(242, 242, 242);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 68px;
+}

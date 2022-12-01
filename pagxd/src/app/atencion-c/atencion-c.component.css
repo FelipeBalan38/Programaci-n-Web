@@ -1,31 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-thead-dark{
-    color: blue;
-}
-
-#PA{
-    margin: auto;
-    max-width: 70%;
-    }
-
-
-td {
-    padding: 5px;
-    border-top: 0px;
-    border-right: 0px;
-    border-bottom: 0px solid rgb(29, 28, 28);
-    border-left: 0px;
-}
-
-.letra{
-    margin-top: 80px;
-    margin-left: 40px;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 55px;
-    color: white;
-    
-}
 
 
 

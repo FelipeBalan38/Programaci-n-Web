@@ -1,76 +1,171 @@
-<div>
-    <div
+<div
     
 class="bg-image mb-1"
-style=" background-image: url(https://img.freepik.com/foto-gratis/banner-fondo-azul-perfecto-canva_1361-3591.jpg?w=1380&t=st=1663546164~exp=1663546764~hmac=44bacda9fdbb8fd7cc647ae35d3fcf3d56b3522c33dd1ee9148c72b6b28abdeb); height: auto; background-repeat: no-repeat; background-size: cover; background-attachment: fixed;
+style=" background-image: url(https://img.freepik.com/foto-gratis/banner-fondo-azul-perfecto-canva_1361-3591.jpg?w=1380&t=st=1663546164~exp=1663546764~hmac=44bacda9fdbb8fd7cc647ae35d3fcf3d56b3522c33dd1ee9148c72b6b28abdeb); height: auto; background-repeat: no-repeat; background-size: cover;
 background-position: center;">
 <div class="mask p-1" style="background-color:rgb(0, 155, 219,0.6) ; height: auto;">
-    <div class="container-fluid register" > 
-        <div class="row">  
-          <h1 class="tipo">Registro de usuarios</h1>   
-            <div class="register-left">
-            <form  #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm.value)"method="post">
-              <div class="forms-group">
-              <div class="container colocar letra">
-                  <label for="exampleFormControlInput1" class="form-label">Plan</label>
-                  <input type="" class="form-control" name="plan" id="plan" placeholder="Escribe el Plan" ngModel #Plan="ngModel" #_Plan required minlength="1" maxlength="1">
-                </div>
-                <div *ngIf="Plan.invalid && (Plan.dirty || Plan.touched)">
-                  <div *ngIf="Plan.errors?.['required']" class="alert alert-danger">plan requerido</div>
-                <div [hidden]="!Plan.errors?.['minlength']" class="alert alert-danger">El campo necesita 1 caracter minimo</div>
-                </div>
-            <div class="container colocar letra">
-                <label for="exampleFormControlInput1" class="form-label">Nombre de cliente</label>
-                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" ngModel #nombre="ngModel" #_nombre required minlength="3">
+
+<div class="container text-justify">
+    <h3 class="text-center color">Registro de Clientes</h3>
+    <p class="text-center color">Favor de llenar el formulario con los campos necesarios</p>
+    
+    
+    <div class="row justify-content-center mb-2">
+      <div class="col-4" style="text-align:center">
+    <button class="ponce" routerLinkActive="active" routerLink="/Admin"><p class="envil mb-1"><span style="text-align:center;">Menu</span></p></button>
+      </div>
+  </div>
+ <!--<pre>{{usuarioForm.value|json}}</pre>-->
+    <div class="container text-justify border border-5 col-5" style="background-color:white ;">
+      <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Nuevo Usuario</button>
+            
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+              <!----------------------Aquí va el primer formulario----------------->
+              <br>
+              <form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm.value)">
+                <div class="row">
+              <div class="form-floating mb-3 col-6">
+                  <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Default input" ngModel #nombre="ngModel" #_nombre required style="background-color:aliceblue;" minlength="3">
+
+                  <label for="floatingInput">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+                      <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
+                    </svg> Primer Nombre:
+                  </label>
+                  <div *ngIf="nombre.invalid && (nombre.dirty||nombre.touched)"><div *ngIf="nombre.errors?.['required']" class="alert alert-danger">Campo Nombre Requerido</div>
+                <div [hidden]="!nombre.errors?.['minlength']" class="alert alert-danger">Debe tener 3 caracteres como minimo</div></div>
               </div>
-              <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
-                <div *ngIf="nombre.errors?.['required']" class="alert alert-danger">Nombre Requerido</div>
-                <div [hidden]="!nombre.errors?.['minlength']" class="alert alert-danger">El nombre necesita 3 caracteres como minimo</div>
+              <div class="form-floating mb-3 col-6">
+                <input type="text" class="form-control" name="nombre1" id="nombre1" placeholder="Default input" ngModel #nombre1="ngModel" #_nombre1 required style="background-color:aliceblue;" minlength="3">
+
+                <label for="floatingInput">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+                    <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
+                  </svg>Segundo Nombre:
+                </label>
+                <div *ngIf="nombre1.invalid && (nombre1.dirty||nombre1.touched)"><div *ngIf="nombre1.errors?.['required']" class="alert alert-danger">Campo Nombre Requerido</div>
+                <div [hidden]="!nombre1.errors?.['minlength']" class="alert alert-danger">Debe tener 3 caracteres como minimo</div></div>
+            </div>
+            </div>
+            <div class="row">
+              <div class="form-floating mb-3 col-6">
+                <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Default input" ngModel #apellido="ngModel" #_apellido required style="background-color:aliceblue;"  minlength="3">
+                <label for="floatingInput">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+                    <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
+                  </svg> Primer apellido:
+                </label>
+                <div *ngIf="apellido.invalid && (apellido.dirty||apellido.touched)"><div *ngIf="apellido.errors?.['required']" class="alert alert-danger">Campo Apellido requerido</div>
+                <div [hidden]="!apellido.errors?.['minlength']" class="alert alert-danger">Debe tener 3 caracteres como minimo</div></div>
+            </div>
+            <div class="form-floating mb-3 col-6">
+              <input type="text" class="form-control" name="apellido1" id="apellido1" placeholder="Default input" ngModel #apellido1="ngModel" #_apellido1 required style="background-color:aliceblue;" minlength="3">
+
+              <label for="floatingInput">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+                  <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
+                </svg> Segundo apellido:
+              </label>
+              <div *ngIf="apellido1.invalid && (apellido1.dirty||apellido1.touched)"><div *ngIf="apellido1.errors?.['required']" class="alert alert-danger">Campo Apellido requerido</div>
+              <div [hidden]="!apellido1.errors?.['minlength']" class="alert alert-danger">Debe tener 3 caracteres como minimo</div></div>
+          </div>
+          </div>
+            <div class="form-floating mb-3 col-15">
+              <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" ngModel #email="ngModel" #_email required style="background-color:aliceblue;" minlength="3">
+
+              <label for="floatingInput">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                </svg> Email:
+              </label>
+              <div *ngIf="email.invalid && (email.dirty||email.touched)"><div *ngIf="email.errors?.['required']" class="alert alert-danger">Campo Email Requerido</div>
+              <div [hidden]="!email.errors?.['minlength']" class="alert alert-danger">Debe tener 3 caracteres como minimo</div></div>
+          </div>
+
+              <div class="form-floating mb-3 col-15">
+                  <input type="date" class="form-control" name="periodo" id="periodo" placeholder="name@example.com" ngModel #periodo="ngModel" #_periodo required style="background-color:aliceblue;" minlength="3">
+
+                  <label for="floatingInput">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-date" viewBox="0 0 16 16">
+                      <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                    </svg> Periodo:
+                  </label>
+                  <div *ngIf="periodo.invalid && (periodo.dirty||periodo.touched)"><div *ngIf="periodo.errors?.['required']" class="alert alert-danger">Campo Periodo Requerido</div>
+                  <div [hidden]="!periodo.errors?.['minlength']" class="alert alert-danger">Debe tener 3 caracteres como minimo</div></div>
               </div>
-              <div class="container colocar letra">
-                <label for="exampleFormControlInput1" class="form-label">Apellido de cliente</label>
-                <input type="text" class="form-control"name="apellido" id="apellido" placeholder="Apellido" ngModel #apellido="ngModel" #_apellido required minlength="3">  
-              </div>
-              <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)">
-                <div *ngIf="apellido.errors?.['required']" class="alert alert-danger">Apellido Requerido</div>
-                <div [hidden]="!apellido.errors?.['minlength']" class="alert alert-danger">el campo Apellido necesita 3 caracteres como minimo</div>
-              </div>
-              <div class="container colocar letra">
-                <label for="exampleFormControlInput1" class="for-label">Correo</label>
-                <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electronico" ngModel #email="ngModel" #_email required minlength="3">
-              </div>
-              <div *ngIf="email.invalid && (email.dirty || email.touched)">
-                <div *ngIf="email.errors?.['required']" class="alert alert-danger">Correo Requerido</div>
-                <div [hidden]="!email.errors?.['minlength']" class="alert alert-danger">el campo correo necesita minimo 3 caracteres</div>
-              </div>
-              <div class="container mb-3 colocar letra">
-                <label for="datapicker" class="form-label">Fecha de Registro</label>
-                <input type="date" class="form-control" name="periodo" id="periodo" placeholder="DD/MM/AA" ngModel #periodo="ngModel" #_periodo required minlength="3">
-              </div>
-              <div *ngIf="periodo.invalid && (periodo.dirty || periodo.touched)">
-                <div *ngIf="periodo.errors?.['required']" class="alert alert-danger"> Fecha Requerida</div>
-                <div [hidden]="!periodo.errors?.['minlength']" class="alert alert-danger">El campo fecha necesita minimo 3 caracteres</div>
-              </div>
-              <div class="container colocar letra">
-                <label for="exampleFormControlInput1" class="for-label">Telefono</label>
-                <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="telefono" ngModel #telefono="ngModel" #_telefono required minlength="10" maxlength="10">
-              </div>
-              <div *ngIf="telefono.invalid && (telefono.dirty||telefono.touched)">
-                <div *ngIf="telefono.errors?.['required']" class="alert alert-danger">Telefono Requerido</div>
-                <div [hidden]="!telefono.errors?.['minlength']" class="alert alert-danger">El campo telefono necesita minimo 10 numeros</div>
-              </div>
-              </div>
-              <div class="form-group">
-              <div class="container mb-3 coloca">
-              <div class="nav-item active btn-center">
-                <button type="submit" class="btn btn-primary" [disabled]="!usuarioForm.form.valid">Cargar</button>
-              </div>
+
+              <div class="form-floating mb-3 col-15">
+                <input type="number" class="form-control" name="telefono" id="telefono" placeholder="name@example.com" ngModel #telefono="ngModel" #_telefono required style="background-color:aliceblue;">
+
+                <label for="floatingInput">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                    <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                  </svg> Telefono:
+                </label>
+                <div *ngIf="telefono.invalid && (telefono.dirty||telefono.touched)"><div *ngIf="telefono.errors?.['required']" class="alert alert-danger">Campo Telefono Requerido</div>
+                <div [hidden]="!telefono.errors?.['minlength']" class="alert alert-danger">Debe tener 3 caracteres como minimo</div></div>
+            </div>
+            <div class="form-floating mb-3 col-15">
+              <input type="password" class="form-control" name="password" id="password" placeholder="name@example.com" ngModel #password="ngModel" #_password required style="background-color:aliceblue;" minlength="3" maxlength="10">
+
+              <label for="floatingInput">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+                  <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"/>
+                  <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                </svg> contraseña:
+              </label>
+              <div *ngIf="password.invalid && (password.dirty||password.touched)"><div *ngIf="password.errors?.['required']" class="alert alert-danger">Campo Contraseña requerido</div>
+              <div [hidden]="!password.errors?.['minlength']" class="alert alert-danger">Debe tener 3 caracteres como minimo</div></div>
+          </div>
+          <div class="container row">
+            <div class="col">
+          <label class="col">Escoja el plan</label><br>
+          <select id="plan"ngModel required name="plan" ngModel="plan" #plan>
+            <option value="A"selected>A</option>
+            <option value="B"selected>B</option>
+          </select>
+            <br>
+          </div>
+
+              <!--------------------Texto---------------------------->
+                <!------------------------Seleccion-------------------------------->
+                <div class="col">
+                <label>¿Ha pagado?</label><br>
+              <select id="activador"ngModel required name="activador" ngModel="activador" #activador>
+                <option value="Pagado"selected>SI</option>
+                <option value="Adeuda"selected>No</option>
+              </select>
             </div>
           </div>
-          </form>
-            </div>
-        </div>  
+              <!--------------Fin del texto--------->
+                <div class="nav-item active">
+                  <div class="col-8">
+                    <a class="btn fourth" routerLinkActive="active" routerLink="/Johan"><p class="envil mb-1"><span style="text-align:end;">Tabla_User</span></p></a>
+                </div>
+              </div>
+                <div class="row justify-content-center">
+                  <div class="col" class="formgroup">
+                    <button type="submit" class="btn fift" [disabled]="!usuarioForm.form.valid">Continue</button>
+                  </div>
+                </div>
+              </form>
+                <br>
+              <!----------------------------Segundo formulario----------------------->
+          </div>
+          <br>
+      
         </div>
-    
+    </div>
+</div>
 </div>
 
+
+
+   

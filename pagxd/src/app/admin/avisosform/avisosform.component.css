@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.celdas{
+margin-top: 20px;
+background-color: rgba(0, 0, 0, 0.4);
+color: white;
+border-radius: 5px;;
+}
+.letra{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 68px;
+}
+.letra2{
+    color: rgb(255, 255, 255);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+.bteliminar{
+    background-color: #0d6efd;
+    color: white;
+}
+.bteliminar:hover{
+    background-color: red;
+}
+.bteditar{
+    background-color: #0d6efd;
+    color: white;
+}
+.act{
+    background-color: green;
+    color: white;
+    border: 0ch;
+}
+.desact{
+    background-color: red;
+    color: white;
+    border: 0ch;
+}
+.bteditar:hover{
+    background-color: green;
+    color: white;
+}
+
+
+.fourth {
+    background: #fff; /* color de fondo */
+    color: rgb(0, 0, 0); /* color de fuente */
+    border: 2px solid rgb(40, 230, 255); /* tamaño y color de borde */
+    padding: 1px 10px;
+    border-radius: 10px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+ 
+  .fourth:hover {
+    color: #fff;/* color de fuente hover */
+  }
+  .fourth::after {
+    content: "";
+    background: rgb(40, 230, 255); /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 0px 10px;
+    display: block;
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    transform: scale(0, 0);
+    transition: all 0.4s ease;
+  }
+  .fourth:hover::after {
+    transition: all 0.6s ease-out;
+    transform: scale(1, 1);
+  }

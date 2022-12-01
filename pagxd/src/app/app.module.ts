@@ -25,6 +25,11 @@ import { AdminusersComponent } from './admin/adminusers/adminusers.component';
 import { AdminquejasComponent } from './admin/adminquejas/adminquejas.component';
 import { AdminpagosComponent } from './admin/adminpagos/adminpagos.component';
 import { AdmiUsuariosComponent } from './admin/admi-usuarios/admi-usuarios.component';
+import { PagoPagadoComponent } from './pago-pagado/pago-pagado.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { QuejasatenComponent } from './admin/adminquejas/quejasaten/quejasaten.component';
+import { TablaUserComponent } from './admin/admi-usuarios/tabla-user/tabla-user.component';
+import { AvisoComponent } from './admin/aviso/aviso.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +52,12 @@ import { AdmiUsuariosComponent } from './admin/admi-usuarios/admi-usuarios.compo
     AdminusersComponent,
     AdminquejasComponent,
     AdminpagosComponent,
-    AdmiUsuariosComponent
+    AdmiUsuariosComponent,
+    PagoPagadoComponent,
+    FilterPipe,
+    QuejasatenComponent,
+    TablaUserComponent,
+    AvisoComponent
   ],
   imports: [
     BrowserModule,

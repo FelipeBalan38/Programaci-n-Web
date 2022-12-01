@@ -1,0 +1,196 @@
+.button1{
+    background: #fff; /* color de fondo */
+    color: rgb(0, 0, 0); /* color de fuente */
+    border: 2px solid rgb(40, 230, 255); /* tamaño y color de borde */
+    padding: 1px 10px;
+    border-radius: 10px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    
+  }
+  .button1:hover {
+    color: #fff;/* color de fuente hover */
+  }
+  .button1::after {
+    content: "";
+    background: rgb(40, 230, 255); /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 0px 10px;
+    display: block;
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    transform: scale(0, 0);
+    transition: all 0.4s ease;
+  }
+  .button1:hover::after {
+    transition: all 0.6s ease-out;
+    transform: scale(1, 1);
+  }
+  
+
+/*Boton Delete*/ 
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: absolute;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: rgb(113, 236, 255);
+  color: #777;
+}
+
+/*Boton Venom*/ 
+.button-container-1 {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
+  overflow: hidden;
+  border: 1px solid;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+}
+.button-container-1 button {
+  width: 101%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background: rgb(236, 71, 50);/*Cambio*/
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  border: none;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+}
+.button-container-1 button:hover {
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 0.7s steps(22) forwards;
+}
+
+
+.mas {
+  position: absolute;
+  color: rgb(30, 201, 158);
+  text-align: center;
+  width: 101%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  position: absolute;
+  font-size: 20px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+
+.fourth {
+    background: #fff; /* color de fondo */
+    color: rgb(0, 0, 0); /* color de fuente */
+    border: 2px solid rgb(40, 230, 255); /* tamaño y color de borde */
+    padding: 1px 10px;
+    border-radius: 10px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+ 
+  .fourth:hover {
+    color: #fff;/* color de fuente hover */
+  }
+  .fourth::after {
+    content: "";
+    background: rgb(40, 230, 255); /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 0px 10px;
+    display: block;
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    transform: scale(0, 0);
+    transition: all 0.4s ease;
+  }
+  .fourth:hover::after {
+    transition: all 0.6s ease-out;
+    transform: scale(1, 1);
+  }

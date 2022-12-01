@@ -1,60 +1,75 @@
-.register-left{
-    text-align:left;
+.fourth {
+    border-color: #36bcf4;
     color: rgb(0, 0, 0);
-    background: #f8f9fa;
-    border-radius: 60px;
-    
-}
-.register{
-    color: rgb(123, 209, 252);
-    margin-top: 4%;
-    background: #0bd3e2;
-  
-    border-radius: 50px;
-    padding: 50px;
-}
-.tipo{
-    text-align: center;
-    font-size: 50px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #ffff;
-}
-.letra{
-    font-size: 20px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.container-fluid {
-
-    border-radius: 1.5rem;
-    margin-top: 2%;
-    max-width: 50%;
-    
-}
-.btn-center{
-    float: right;
-
-}
-.posicion{
-    padding: 10px; 
-    margin: 10px; 
-    float: right; 
-    width: 250px;
-    border-radius: 1.5rem;
-}
-.colocar{
-    padding: 10px; 
-    margin: 10px; 
-    width: 250px;
-}
-.coloca{ 
-    padding-left: 50px;
+    background-image: -webkit-linear-gradient(45deg, #36bcf4 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #36bcf4 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
     float: left;
-    padding:10px;
-}
-.posiciones{
-    padding: 10px; 
-    margin: 10px; 
-    float: left; 
-    width: 250px;
     border-radius: 1.5rem;
-}
+    width: 45%;
+    margin-top: 10%;
+  }
+  .fourth:hover {
+    background-position: 0;
+  }
+
+  .fift {
+    border-color: #36bcf4;
+    color: rgb(0, 0, 0);
+    background-image: -webkit-linear-gradient(45deg, #36bcf4 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #36bcf4 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    float: right;
+    border-radius: 1.5rem;
+    width: 45%;
+    margin-top: 10%;
+  }
+  .fift:hover {
+    background-position: 0;
+  }
+  .color{
+    color: aliceblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+
+  .ponce {
+    background: #fff; /* color de fondo */
+    color: rgb(0, 0, 0); /* color de fuente */
+    border: 2px solid rgb(40, 230, 255); /* tamaño y color de borde */
+    padding: 1px 10px;
+    border-radius: 10px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+ 
+  .ponce:hover {
+    color: #fff;/* color de fuente hover */
+  }
+  .ponce::after {
+    content: "";
+    background: rgb(40, 230, 255); /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 0px 10px;
+    display: block;
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    transform: scale(0, 0);
+    transition: all 0.4s ease;
+  }
+  .ponce:hover::after {
+    transition: all 0.6s ease-out;
+    transform: scale(1, 1);
+  }

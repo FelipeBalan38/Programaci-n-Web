@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Usuario } from 'src/app/shared/interface';
-import { UsuarioService } from 'src/app/services/usuario.Service';
-
+import { Component, OnInit} from '@angular/core';
+import { Pago } from 'src/app/shared/interface';
+import { PagoService } from 'src/app/services/pago.service';
 @Component({
   selector: 'app-adminpagos',
   templateUrl: './adminpagos.component.html',
@@ -9,34 +8,44 @@ import { UsuarioService } from 'src/app/services/usuario.Service';
 })
 export class AdminpagosComponent implements OnInit {
 
-  usuarios: Usuario[] = [];
+  [x: string]: any;
 
-  constructor(private readonly usuarioService:UsuarioService) { }
+  pagos!: Pago[];
+
+  constructor(private readonly PagoService:PagoService) { }
   
   ngOnInit(): void {
-    this.usuarioService.list().subscribe(usuarios=>{
-      this.usuarios = [...usuarios];
+    this.PagoService.getPagos().subscribe(pagos=>{
+      this.pagos = [...pagos];
     });
   }
 
-
-  deleteUsuario(id:number){
-    //console.log("id de usuario ->"+id);
-    if(confirm('¿Desea aprovar el pago?')){
-      this.usuarioService.deleteUser(id).subscribe(res=>{
-        this.usuarios=this.usuarios.filter(item => item.id !==id);
-        console.log("Queja deleted succesfully")
-      });
-    }
-  }
-
-  updateUsuario(usuario:Usuario){
-    //console.log("id de usuario ->"+usuario._id)
-    this.usuarioService.updateUser(usuario).subscribe(res =>{
-      //const tempArr = this.usuarios.filter(values => values._id !== usuario._id);
-      //this.usuarios = [...tempArr,usuario];
-      console.log("Entro");
-    });
-  }
+  deletePago(id:String){
+    this.PagoService.deletePago(id).subscribe(res => {
+      this.pagos = this.pagos.filter(item => item.id !== id);
+      console.log('Pago deleted successfully!');
+ })
 }
+//////////////////////////////////////////////////
+pagoAprob(id:String, pago:Pago){
+  pago.activador="Adeuda";
+  this.PagoService.updatePago(id, pago).subscribe(res =>{
+    console.log("Ok");
+  })
+}
+pagoDeneg(id:String, pago:Pago){
+  pago.activador="Pagado";
+  this.PagoService.updatePago(id, pago).subscribe(res =>{
+    console.log("Ok");
+  })
+}
+
+updatePago(id:String, pago:Pago){
+  this.PagoService.updatePago(id, pago).subscribe(res =>{
+    console.log("Ok");
+  })
+}
+}
+
+
 
