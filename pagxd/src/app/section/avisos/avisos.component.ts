@@ -9,7 +9,10 @@ import { AvisosService } from 'src/app/services/avisos.service';
 })
 export class AvisosComponent implements OnInit {
   avisos!:Aviso[];
-  constructor(private readonly avisosService:AvisosService) { }
+
+  constructor(private readonly avisosService:AvisosService) {
+
+   }
 
   ngOnInit(): void {
     this.avisosService.getAvisos().subscribe(avisos=>{
