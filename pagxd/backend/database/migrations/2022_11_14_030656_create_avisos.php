@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->text('nota');
+            $table->string('estado');
             $table->timestamps();
         });
     }

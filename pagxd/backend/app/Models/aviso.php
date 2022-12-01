@@ -13,6 +13,7 @@ class aviso extends Model
     protected $fillable = [
       'titulo',
       'nota',
+      'estado',
       
     ];
 }

@@ -23,7 +23,10 @@ export class AvisosService {
   getAvisos():Observable<Aviso[]>{
     return this.http.get<Aviso[]>(this.API);
   }
-
+  getAvisos1():Observable<Aviso[]>{
+    return this.http.get<Aviso[]>(`${this.API}?estado=activado`);
+  }
+  
   updateAviso(id: String, avisos:Aviso): Observable<Aviso> {
     return this.http.put<Aviso>(`${this.API}/${id}`,avisos)
   }

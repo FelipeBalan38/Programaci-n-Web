@@ -18,6 +18,7 @@ class AvisoController extends Controller
     public function create(Request $request){
       $data['titulo'] = $request['titulo'];
       $data['nota'] = $request['nota'];
+      $data['estado'] = $request['estado'];
       aviso::create($data);
       return response()->json([
           'message' => "Successfully created",
@@ -41,6 +42,7 @@ class AvisoController extends Controller
     public function update(Request $request,$id){
         $data['titulo'] = $request['titulo'];
         $data['nota'] = $request['nota'];
+        $data['estado'] = $request['estado'];
       aviso::find($id)->update($data);
       return response()->json([
           'message' => "Successfully updated",

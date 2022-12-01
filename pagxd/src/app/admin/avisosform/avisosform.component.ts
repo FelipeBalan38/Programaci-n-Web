@@ -9,10 +9,12 @@ import { AvisosService } from 'src/app/services/avisos.service';
 })
 export class AvisosformComponent implements OnInit {
 [x: string]: any;
-
+public seccionAvisos:boolean;
   avisos!:Aviso[];
-
-  constructor(private readonly avisosService:AvisosService) { }
+  a!: Aviso;
+  constructor(private readonly avisosService:AvisosService) { 
+    this.seccionAvisos=true;
+  }
 
   ngOnInit(): void {
     this.avisosService.getAvisos().subscribe(avisos=>{
@@ -37,7 +39,18 @@ export class AvisosformComponent implements OnInit {
         });
       }
     }
-
+    activarAviso( id:String ,aviso:Aviso){
+      aviso.estado="Activado";
+      this.avisosService.updateAviso(id, aviso).subscribe(res =>{
+        console.log("Entro");
+      })
+    }
+    desactivarAviso( id:String ,aviso:Aviso){
+      aviso.estado="Desactivado";
+      this.avisosService.updateAviso(id, aviso).subscribe(res =>{
+        console.log("Entro");
+      })
+    }
     updateAviso( id:String ,aviso:Aviso){
       this.avisosService.updateAviso(id, aviso).subscribe(res =>{
         console.log("Entro");
@@ -49,5 +62,13 @@ export class AvisosformComponent implements OnInit {
       console.log(change);
       change.id = id;
       this.updateAviso(id, change)
+    }
+    onShowHide()
+    {
+      this.seccionAvisos=true;
+    }
+    editar(avison:Aviso)
+    {
+      this.a=avison;
     }
 }

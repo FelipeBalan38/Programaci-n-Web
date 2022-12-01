@@ -23,6 +23,7 @@ import { AvisosformComponent } from './admin/avisosform/avisosform.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CrearavisoComponent } from './section/crearaviso/crearaviso.component';
 import { AvisosComponent } from './section/avisos/avisos.component';
+import { ServeComponent } from './serve/serve.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AvisosComponent } from './section/avisos/avisos.component';
     PrincipalComponent,
     AvisosformComponent,
     CrearavisoComponent,
-    AvisosComponent
+    AvisosComponent,
+    ServeComponent
   ],
   imports: [
     BrowserModule,

@@ -12,11 +12,9 @@ background-position: center;">
 
 <div class="container">
     <table class="table  celdas"  *ngFor="let aviso of avisos.slice().reverse(); let i=index;">
-      <tbody>
-        
-          <td></td>
-          <td><h1 class="letra"> {{aviso.titulo}}</h1>
-            <p style="margin-top: 10px">{{aviso.nota}}</p></td>
+      <tbody>  
+          <td *ngIf="aviso.estado==='Activado'"><h1 class="letra"> {{aviso.titulo}}</h1>
+            <p *ngIf="aviso.estado==='Activado'"style="margin-top: 10px">{{aviso.nota}}</p></td>
         
       </tbody>
     </table>
