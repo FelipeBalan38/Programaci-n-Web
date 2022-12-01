@@ -11,6 +11,11 @@ border-radius: 5px;;
     font-family: 'Bebas Neue', cursive;
     font-size: 68px;
 }
+.letra2{
+    color: rgb(242, 242, 242);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
 .bteliminar{
     background-color: #0d6efd;
     color: white;

@@ -4,19 +4,21 @@
 
 <form *ngIf="seccionAvisos===true" class= "container"#avisosForm="ngForm" (ngSubmit)="onSubmit(avisosForm.value)">
     <div class="form-floating mb-3">
+      <p class="letra2">Titulo:</p>
         <input type="text"  class="form-control" name="titulo" id="titulo" placeholder="Default input" ngModel required style="background-color:aliceblue;">
 
     </div>
 
     <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Nota:</label>
+        <label for="exampleFormControlTextarea1" class="form-label letra2">Nota:</label>
         <textarea class="form-control" name="nota" id="nota" ngModel required=""
          rows="3"> 
           
         </textarea>
 
       </div>
-      <select  id= "estado"ngModel required name="estado">
+      <p class="letra2">Mostrar aviso</p>
+      <select  id= "estado" ngModel required name="estado">
         <option value="Activado" selected>si</option>
         <option value="Desactivado">no</option>
       </select>
@@ -32,19 +34,17 @@
 
     <form *ngIf="seccionAvisos===false" class= "container"#avisosFormu="ngForm" (ngSubmit)="onSubmit(avisosFormu.value)">
       <div class="form-floating mb-3">
+        <p class="letra2">Titulo:</p>
           <input type="text" class="form-control" name="titulo" id="titulo" placeholder="{{a.titulo}}" ngModel="{{a.titulo}}" style="background-color:aliceblue;">
-  
-          <label for="floatingInput">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
-              <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
-            </svg> Título:
-          </label>
+
       </div>
   
       <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label letra2">Nota:</label>
           <textarea class="form-control" name="nota" id="nota" ngModel="{{a.nota}}" rows="3" style="background-color:aliceblue;"> </textarea>
   
         </div>
+        <p class="letra2">Mostrar aviso</p>
         <select  id= "estado"ngModel required name="estado">
           <option value="Activado" selected>si</option>
           <option value="Desactivado">no</option>
@@ -70,7 +70,7 @@
               <th scope="col">Titulo</th>
               <th scope="col">Nota</th>
               <th scope="col">Estado</th>
-
+              <th scope="colgroup">Opciones</th>
             </tr>
           </thead>
           <tbody>
