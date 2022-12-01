@@ -1,0 +1,49 @@
+
+<div>
+    <app-header></app-header>
+    <div
+    
+  class="bg-image mb-1"
+  style=" background-image: url(https://img.freepik.com/foto-gratis/banner-fondo-azul-perfecto-canva_1361-3591.jpg?w=1380&t=st=1663546164~exp=1663546764~hmac=44bacda9fdbb8fd7cc647ae35d3fcf3d56b3522c33dd1ee9148c72b6b28abdeb); height: 100vh; background-repeat: no-repeat; background-size: cover;
+  background-position: center;">
+  <div class="mask p-1" style="background-color:rgb(0, 155, 219,0.6) ; height: 100vh;">
+    <div class="container2 text-center p-2">
+        <h2 class="letra"><span style="color:azure;">Usuarios registrados</span></h2>
+  <div class="container">
+    <div class="form-check">
+      <table class="table">
+        <thead>
+          <tr style="background-color: rgb(26, 172, 251); font-family: 'Bebas Neue', cursive; font-size: 25px;">
+            <th scope="col"><span style="color:azure;">#</span></th>
+            <th scope="col"><span style="color:azure;">Primer Nombre</span></th>
+            <th scope="col"><span style="color:azure;">Segundo Nombre</span></th>
+            <th scope="col"><span style="color:azure;">Primer Apellido</span></th>
+            <th scope="col"><span style="color:azure;">Segundo Apellido</span></th>
+            <th scope="col"><span style="color:azure;">Usuario</span></th>
+            <th scope="col"><span style="color:azure;">Contraseña</span></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr style="background-color: rgb(255, 255, 255);  font-family: 'Bebas Neue', cursive; font-size: 24px;" *ngFor="let pago of pagos; let i=index;">
+            
+            <td *ngIf="pago.activador==='Pagado'">{{i+1}}</td>
+          
+
+            <td *ngIf="pago.activador==='Pagado'">{{pago.nombre}}</td>
+            <td *ngIf="pago.activador==='Pagado'">{{pago.nombre1}}</td>
+            <td *ngIf="pago.activador==='Pagado'">{{pago.apellido}}</td>
+            <td *ngIf="pago.activador==='Pagado'">{{pago.apellido1}}</td>
+            <td *ngIf="pago.activador==='Pagado'">{{pago.email}}</td>
+            <td *ngIf="pago.activador==='Pagado'">{{pago.password}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  
+</div>
+    
+</div>
+</div>

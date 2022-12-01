@@ -18,6 +18,12 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AvPagoComponent } from './av-pago/av-pago.component';
+import { PagoAdminComponent } from './pago-admin/pago-admin.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './PagoAdmin/form/form.component';
+import { AprobadoPagComponent } from './aprobado-pag/aprobado-pag.component';
+import { TablaUsuarioComponent } from './tabla-usuario/tabla-usuario.component';
+
 
 @NgModule({
   declarations: [
@@ -34,13 +40,18 @@ import { AvPagoComponent } from './av-pago/av-pago.component';
     FormularioComponent,
     FondPComponent,
     HomeComponent,
-    AvPagoComponent
+    AvPagoComponent,
+    PagoAdminComponent,
+    FormComponent,
+    AprobadoPagComponent,
+    TablaUsuarioComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
