@@ -28,4 +28,18 @@ export class AdminquejasComponent implements OnInit {
       })
     }
   }
+  
+  atenderQueja(id:number,queja:Queja){
+    queja.estado = "Atendiendo";
+    this.QuejaService.update(id,queja).subscribe(res =>{
+      console.log("Actualizado a Atendiendoooo");
+    })
+  }
+
+  finalQueja(id:number,queja:Queja){
+    queja.estado = "Atendido";
+    this.QuejaService.update(id,queja).subscribe(res =>{
+      console.log("Actualizado a Atendido");
+    })
+  }
 }

@@ -40,6 +40,13 @@ export class QuejaService {
     )
   }
 
+  update(id:number, queja:Queja): Observable<Queja> {
+    return this.httpClient.put<Queja>(this.API + id, JSON.stringify(queja), this.httpOptions)
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
+
   errorHandler(error: { error: { message: string; }; status: any; message: any; }) {
     let errorMessage = '';
     if(error.error instanceof ErrorEvent) {

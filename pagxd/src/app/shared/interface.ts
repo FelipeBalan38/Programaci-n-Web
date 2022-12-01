@@ -13,6 +13,8 @@ export interface Usuario{
 }
 export interface Queja{
     id: number;
+    posprobl: String;
     telf: number;
     mensage: String;
+    estado: String;
 }
